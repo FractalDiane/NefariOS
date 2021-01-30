@@ -19,11 +19,15 @@ func _ready():
 	_streamer.connect("volume_adjusted", self, "_on_volume_adjusted")
 
 func _on_volume_adjusted(peak):
-	#if peak == -200 || peak == 0:
-	#	return
-	
 	if debug:
 		print(peak)
+		
+	if peak == -200 || peak == 0:
+		set_param(Light.PARAM_ENERGY, energy_min)
+		return
+		
 	_peak_adjusted = clamp(abs((peak - vol_threshold) / (vol_peak - vol_threshold)), 0, 1)
 	_energy_lerped = lerp(energy_min, energy_max, _peak_adjusted)
 	set_param(Light.PARAM_ENERGY, _energy_lerped)
+	
+	
