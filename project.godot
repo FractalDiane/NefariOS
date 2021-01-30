@@ -24,7 +24,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/files/nos_text_file.gd"
 }, {
-"base": "Node",
+"base": "Control",
 "class": "Screen",
 "language": "GDScript",
 "path": "res://scripts/screen.gd"

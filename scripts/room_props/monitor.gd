@@ -11,4 +11,4 @@ func _ready() -> void:
 	tex.set_flags(ViewportTexture.FLAG_FILTER)
 	get_node("Cube").get_surface_material(3).set_shader_param("viewport_texture", tex)
 	
-	screen.set_screen_text(file_to_display.text)
+	screen.call_deferred("set_screen_text", file_to_display.text)
