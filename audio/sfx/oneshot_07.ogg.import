@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/oneshot_07.ogg-6ca922b500edd4714365e24524da1446.oggstr"
+
+[deps]
+
+source_file="res://audio/sfx/oneshot_07.ogg"
+dest_files=[ "res://.import/oneshot_07.ogg-6ca922b500edd4714365e24524da1446.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
