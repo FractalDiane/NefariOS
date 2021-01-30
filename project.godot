@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "NOSTextFile",
 "language": "GDScript",
 "path": "res://scripts/files/nos_text_file.gd"
+}, {
+"base": "Node",
+"class": "Screen",
+"language": "GDScript",
+"path": "res://scripts/screen.gd"
 } ]
 _global_script_class_icons={
 "NOSFile": "",
 "NOSImageFile": "",
-"NOSTextFile": ""
+"NOSTextFile": "",
+"Screen": ""
 }
 
 [application]
