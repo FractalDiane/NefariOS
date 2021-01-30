@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://audio/game_start.ogg" type="AudioStream" id=1]
+[ext_resource path="res://scenes/audio/ChaoticAudioStreamPlayer3D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/audio_flicker_light.gd" type="Script" id=3]
+
+[node name="ChaoticAudioLight" type="SpotLight"]
+light_energy = 0.0
+script = ExtResource( 3 )
+
+[node name="ChaoticAudioStreamPlayer3D" parent="." instance=ExtResource( 2 )]
+play_on_ready = true
+streams = [ ExtResource( 1 ) ]

@@ -18,8 +18,8 @@ signal volume_adjusted
 # 3 - timer wait
 var _mode = 0
 var _timer
-var _peak0 = -64
-var _peak1 = -64
+var _peak0 = -200
+var _peak1 = -200
 var _bus_index = 0
 var _uid
 
@@ -62,7 +62,6 @@ func _queue_and_play():
 	if chaos:
 		var scale_to = 1 - (randf() * (pitch_shift * 2)) + pitch_shift
 		set_pitch_scale(scale_to)
-		print(scale_to)
 	var index = randi() % len(streams)
 	set_stream(streams[index])
 	play()
