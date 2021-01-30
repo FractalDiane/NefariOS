@@ -1,26 +1,26 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://models/room_props/monitor.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/screen.tscn" type="PackedScene" id=2]
-[ext_resource path="res://materials/viewport_texture.shader" type="Shader" id=3]
-[ext_resource path="res://scripts/room_props/monitor.gd" type="Script" id=4]
-[ext_resource path="res://models/room_props/sticky_note.tscn" type="PackedScene" id=5]
-[ext_resource path="res://models/room_props/sticky_note_text.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scripts/room_props/sticky_note.gd" type="Script" id=7]
-[ext_resource path="res://materials/viewport_texture_monitor.shader" type="Shader" id=8]
+[ext_resource path="res://materials/viewport_texture_monitor.shader" type="Shader" id=1]
+[ext_resource path="res://materials/viewport_texture.shader" type="Shader" id=2]
+[ext_resource path="res://scripts/room_props/monitor.gd" type="Script" id=3]
+[ext_resource path="res://scripts/room_props/sticky_note.gd" type="Script" id=4]
+[ext_resource path="res://models/room_props/sticky_note_text.tscn" type="PackedScene" id=5]
+[ext_resource path="res://models/room_props/monitor.tscn" type="PackedScene" id=6]
+[ext_resource path="res://models/room_props/sticky_note.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/screen.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ShaderMaterial" id=1]
-shader = ExtResource( 8 )
+shader = ExtResource( 1 )
 shader_param/scanline_height = 4
 
 [sub_resource type="ShaderMaterial" id=2]
-shader = ExtResource( 3 )
+shader = ExtResource( 2 )
 shader_param/uv_offset = Vector2( -0.106, -0.106 )
 
 [node name="Scene" type="Spatial"]
 
-[node name="Monitor" parent="." instance=ExtResource( 1 )]
-script = ExtResource( 4 )
+[node name="Monitor" parent="." instance=ExtResource( 6 )]
+script = ExtResource( 3 )
 
 [node name="Cube" parent="Monitor" index="0"]
 material/3 = SubResource( 1 )
@@ -30,9 +30,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212, 0, 4 )
 current = true
 fov = 30.0
 
-[node name="StickyNote" parent="." instance=ExtResource( 5 )]
+[node name="StickyNote" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 0.999987, 0.00513125, 0, -0.00513125, 0.999987, 0.997252, 0.210987, 0.959464 )
-script = ExtResource( 7 )
+script = ExtResource( 4 )
 note_contents = "Here is some sample text
 on this here sticky note
 You find those files for this person
@@ -46,13 +46,13 @@ material/0 = SubResource( 2 )
 size = Vector2( 722, 402 )
 render_target_v_flip = true
 
-[node name="Scene" parent="Viewport" instance=ExtResource( 2 )]
+[node name="Scene" parent="Viewport" instance=ExtResource( 8 )]
 
 [node name="ViewportNote" type="Viewport" parent="."]
 size = Vector2( 700, 700 )
 render_target_v_flip = true
 
-[node name="StickyNoteText" parent="ViewportNote" instance=ExtResource( 6 )]
+[node name="StickyNoteText" parent="ViewportNote" instance=ExtResource( 5 )]
 
 [editable path="Monitor"]
 
