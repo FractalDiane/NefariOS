@@ -34,25 +34,79 @@ rect_min_size = Vector2( 718, 398 )
 custom_fonts/normal_font = ExtResource( 2 )
 custom_constants/line_separation = 0
 meta_underlined = false
-text = "Troubleshooting your new copy of NefariOS (R)
-
-////////////////////////////////////////
-My computer won't turn on
-////////////////////////////////////////
-- Please ensure your computer is plugged in.
-- Please ensure you have not inserted the NefariOS (R) disk backwards.
-- Please ensure your disk drive is not defective. Check for any unusual noises or rattling coming from your drive.
-- Please inspect the power supply of your computer to ensure it is not defective. Refer to your computer's enclosed manual for instructions on removing and inspecting the power supply.
-- Please ensure you have not accidentally removed the Random Access Memory (RAM) from your computer.
-
-//////////////////////////////////////////////////////////
-My computer starts up with a message saying \"OS ERROR\"
-//////////////////////////////////////////////////////////
-- Please ensure your computer meets the specified system requirements for running NefariOS (R). Refer to the enclosed manual for the minimum system requirements.
-- Please ensure you have not damaged the NefariOS (R) disk beyond operation. If the disk is damaged, you will need to purchase a new copy of the operating system.
-- Please ensure your disk drive is not defective. Check for any unusual noises"
+text = "              __            _    ___  ____  
+  _ __   ___ / _| __ _ _ __(_)  / _ \\/ ___| 
+ | '_ \\ / _ \\ |_ / _` | '__| | | | | \\___ \\ 
+ | | | |  __/  _| (_| | |  | | | |_| |___) |
+ |_| |_|\\___|_|  \\__,_|_|  |_|  \\___/|____/ 
+                                            "
 scroll_active = false
 __meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 400.0
+margin_top = 7.0
+margin_right = 798.0
+margin_bottom = 206.0
+rect_min_size = Vector2( 718, 398 )
+custom_fonts/normal_font = ExtResource( 2 )
+custom_constants/line_separation = 0
+meta_underlined = false
+text = "+------------------------------+
+|        X             X       |
+|      XXX             XX      |
+|     XXXX             XXX     |
+|    XXXXX             XXXX    |
+|    XXXXX             XXXX    |
+|    XXXXX            XXXXX    |
+|     XXXXXX         XXXXX     |
+|       XXXXXXXXXXXXXXXX       |
+|         XXXXXXXXXXXXXX       |
+|        XXX    XXX   XXX      |
+|       XXXXXXXXXXXXXXXXXX     |
+|       XXXXXXX XXX XXXXXX     |
+|      XXXXXXXXXXXXXXXXXXXX    |
+|      XX   XXXXXXXXXXXXXXX    |
+|            XXXX    XXX  X    |
++------------------------------+
+"
+scroll_active = false
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BootText" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 400.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 718, 398 )
+custom_fonts/normal_font = ExtResource( 2 )
+custom_constants/line_separation = 0
+meta_underlined = false
+text = "
+
+
+
+
+
+	v1.3.9
+	Copyright (C) 1986 NefariOS Ltd.
+
+
+
+	Booting NefariOS..."
+scroll_active = false
+__meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
