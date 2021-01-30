@@ -8,9 +8,26 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Resource",
+"class": "NOSFile",
+"language": "GDScript",
+"path": "res://scripts/files/nos_file.gd"
+}, {
+"base": "NOSFile",
+"class": "NOSImageFile",
+"language": "GDScript",
+"path": "res://scripts/files/nos_image_file.gd"
+}, {
+"base": "NOSFile",
+"class": "NOSTextFile",
+"language": "GDScript",
+"path": "res://scripts/files/nos_text_file.gd"
+} ]
 _global_script_class_icons={
-
+"NOSFile": "",
+"NOSImageFile": "",
+"NOSTextFile": ""
 }
 
 [application]
