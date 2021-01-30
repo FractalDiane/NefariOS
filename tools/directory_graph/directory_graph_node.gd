@@ -37,6 +37,7 @@ func set_owners() -> void:
 	owner = get_parent()
 	directory_name = get_directory_name()
 	
+	file_paths.clear()
 	for child in $ScrollContainer/VBoxContainer.get_children():
 		var path := child.get_node("LineEdit").text as String
 		file_paths.append(path)
