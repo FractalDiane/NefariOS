@@ -1,8 +1,21 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://fonts/font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scripts/screen_cursor.gd" type="Script" id=3]
 [ext_resource path="res://scripts/screen.gd" type="Script" id=4]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+render_mode unshaded;
+
+void fragment() {
+	vec4 screen = texture(SCREEN_TEXTURE, SCREEN_UV);
+	COLOR = vec4(1f - screen.r, 1f - screen.g, 1f - screen.b, 1f);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
 
 [node name="Screen" type="Control"]
 anchor_right = 1.0
@@ -49,10 +62,10 @@ __meta__ = {
 [node name="Logo" type="RichTextLabel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 400.0
-margin_top = 7.0
-margin_right = 798.0
-margin_bottom = 206.0
+margin_left = 404.0
+margin_top = 1.0
+margin_right = 802.0
+margin_bottom = 200.0
 rect_min_size = Vector2( 718, 398 )
 custom_fonts/normal_font = ExtResource( 2 )
 custom_constants/line_separation = 0
@@ -77,7 +90,6 @@ text = "+------------------------------+
 "
 scroll_active = false
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -125,6 +137,7 @@ __meta__ = {
 }
 
 [node name="Cursor" type="Control" parent="."]
+material = SubResource( 2 )
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 3 )
