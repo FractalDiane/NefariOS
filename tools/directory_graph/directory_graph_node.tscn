@@ -1,0 +1,99 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://tools/directory_graph/directory_graph_node.gd" type="Script" id=1]
+
+[node name="GraphNode" type="GraphNode"]
+margin_right = 263.0
+margin_bottom = 297.0
+mouse_filter = 1
+title = "Directory"
+show_close = true
+resizable = true
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color( 1, 1, 1, 1 )
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color( 1, 1, 1, 1 )
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color( 1, 1, 1, 1 )
+slot/3/left_enabled = false
+slot/3/left_type = 0
+slot/3/left_color = Color( 1, 1, 1, 1 )
+slot/3/right_enabled = false
+slot/3/right_type = 0
+slot/3/right_color = Color( 1, 1, 1, 1 )
+slot/4/left_enabled = false
+slot/4/left_type = 0
+slot/4/left_color = Color( 1, 1, 1, 1 )
+slot/4/right_enabled = false
+slot/4/right_type = 0
+slot/4/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 247.0
+margin_bottom = 48.0
+placeholder_text = "Directory Name..."
+
+[node name="AddFile" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 49.0
+margin_right = 247.0
+margin_bottom = 69.0
+text = "Add File"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 16.0
+margin_top = 70.0
+margin_right = 247.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 0, 200 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 231.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 16.0
+margin_top = 271.0
+margin_right = 247.0
+margin_bottom = 291.0
+
+[node name="Add" type="Button" parent="HBoxContainer"]
+margin_right = 100.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Add Directory"
+
+[node name="Remove" type="Button" parent="HBoxContainer"]
+margin_left = 104.0
+margin_right = 231.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Remove Directory"
+
+[node name="PortsBegin" type="Control" parent="."]
+margin_left = 16.0
+margin_top = 292.0
+margin_right = 247.0
+margin_bottom = 292.0
+[connection signal="close_request" from="." to="." method="_on_GraphNode_close_request"]
+[connection signal="pressed" from="AddFile" to="." method="_on_AddFile_pressed"]
+[connection signal="pressed" from="HBoxContainer/Add" to="." method="_on_Add_pressed"]
+[connection signal="pressed" from="HBoxContainer/Remove" to="." method="_on_Remove_pressed"]

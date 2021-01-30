@@ -9,6 +9,21 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "GraphEdit",
+"class": "DirectoryGraph",
+"language": "GDScript",
+"path": "res://tools/directory_graph/directory_graph.gd"
+}, {
+"base": "GraphNode",
+"class": "DirectoryGraphNode",
+"language": "GDScript",
+"path": "res://tools/directory_graph/directory_graph_node.gd"
+}, {
+"base": "Reference",
+"class": "DirectoryNode",
+"language": "GDScript",
+"path": "res://scripts/logic/directory_node.gd"
+}, {
 "base": "Resource",
 "class": "NOSFile",
 "language": "GDScript",
@@ -30,6 +45,9 @@ _global_script_classes=[ {
 "path": "res://scripts/screen.gd"
 } ]
 _global_script_class_icons={
+"DirectoryGraph": "",
+"DirectoryGraphNode": "",
+"DirectoryNode": "",
 "NOSFile": "",
 "NOSImageFile": "",
 "NOSTextFile": "",

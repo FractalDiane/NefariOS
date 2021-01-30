@@ -6,4 +6,4 @@ export(String, MULTILINE) var text: String
 
 
 func get_file_extension() -> String:
-	return ""
+	return "txt"
