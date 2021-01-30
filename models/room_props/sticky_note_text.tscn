@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://fonts/font_note.tres" type="DynamicFont" id=1]
+
+[node name="StickyNoteText" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 600.0
+margin_bottom = 600.0
+color = Color( 1, 0.968627, 0.709804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="."]
+margin_left = 24.0
+margin_top = 6.0
+margin_right = 624.0
+margin_bottom = 606.0
+rect_min_size = Vector2( 600, 600 )
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Find these files:
+- Some file
+- Some other file
+- Some third file
+
+Do NOT TOUCH THESE FILES:
+- secrets.txt
+- innocent.png
+- CS378IntroToBlockchain.pdf
+
+Do it fast.
+- G"
+__meta__ = {
+"_edit_use_anchors_": false
+}

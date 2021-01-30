@@ -1,7 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=2]
-
-[sub_resource type="Shader" id=1]
-code = "shader_type spatial;
+shader_type spatial;
 render_mode unshaded;
 
 uniform sampler2D viewport_texture : hint_albedo;
@@ -11,8 +8,3 @@ void fragment() {
 	ALBEDO = texture(viewport_texture, UV).rgb;
 	ALBEDO *= 1f - (0.5 * float(int(FRAGCOORD.y) % scanline_height != 0));
 }
-"
-
-[resource]
-shader = SubResource( 1 )
-shader_param/scanline_height = 4
