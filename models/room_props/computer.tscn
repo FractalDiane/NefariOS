@@ -6,3 +6,4 @@
 
 [node name="Cube010" parent="." index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, 0, 0.45 )
+use_in_baked_light = true
