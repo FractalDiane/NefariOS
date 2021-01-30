@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://fonts/font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scripts/screen_cursor.gd" type="Script" id=3]
 
-[node name="Scene" type="Control"]
+[node name="Screen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -960.0
@@ -34,7 +35,7 @@ custom_constants/line_separation = 0
 meta_underlined = false
 text = "Infinitesimality (R) Audio Trimming Software
 Copyright (C) 1987 Iinfinitesimality Co.
-v1.3.8
+v1.3.8 test 
 
 ==================================
 INTRODUCTION
@@ -59,6 +60,14 @@ margin_top = 328.0
 margin_right = 712.0
 margin_bottom = 392.0
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cursor" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
