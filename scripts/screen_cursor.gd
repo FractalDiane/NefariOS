@@ -10,4 +10,4 @@ func _process(_delta: float) -> void:
 
 func _draw() -> void:
 	var mouse_pos = get_global_mouse_position()
-	draw_rect(Rect2(Vector2(clamp(9 * floor(mouse_pos.x / 9) - 272, 0, 700) + 1, clamp(16 * floor(mouse_pos.y / 16) - 160, 0, 384) + 1), Vector2(9, 14)), Color.white)
+	draw_rect(Rect2(Vector2(clamp(9 * floor(mouse_pos.x / 9) - 272, 0, 700), clamp(16 * floor(mouse_pos.y / 16) - 160, 0, 384)), Vector2(9, 14)), Color.white)

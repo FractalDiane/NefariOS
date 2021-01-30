@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
+[ext_resource path="res://scripts/ui/window_container.gd" type="Script" id=1]
 [ext_resource path="res://fonts/font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scripts/screen_cursor.gd" type="Script" id=3]
 [ext_resource path="res://scripts/screen.gd" type="Script" id=4]
+[ext_resource path="res://computer_theme.tres" type="Theme" id=5]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -28,6 +30,8 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -1.0
+margin_top = -1.0
 margin_right = 722.0
 margin_bottom = 402.0
 color = Color( 0, 0, 0, 1 )
@@ -39,8 +43,6 @@ __meta__ = {
 [node name="Text" type="RichTextLabel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1.0
-margin_top = 1.0
 margin_right = 400.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 718, 398 )
@@ -62,10 +64,9 @@ __meta__ = {
 [node name="Logo" type="RichTextLabel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 404.0
-margin_top = 1.0
-margin_right = 802.0
-margin_bottom = 200.0
+margin_left = 396.0
+margin_right = 794.0
+margin_bottom = 199.0
 rect_min_size = Vector2( 718, 398 )
 custom_fonts/normal_font = ExtResource( 2 )
 custom_constants/line_separation = 0
@@ -97,10 +98,8 @@ __meta__ = {
 [node name="BootText" type="RichTextLabel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1.0
-margin_top = 1.0
-margin_right = 400.0
-margin_bottom = 200.0
+margin_right = 399.0
+margin_bottom = 199.0
 rect_min_size = Vector2( 718, 398 )
 custom_fonts/normal_font = ExtResource( 2 )
 custom_constants/line_separation = 0
@@ -137,6 +136,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Panel" type="Panel" parent="."]
+margin_left = 10.0
+margin_top = 17.0
+margin_right = 46.0
+margin_bottom = 45.0
+theme = ExtResource( 5 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+title = "TEST"
+
 [node name="Cursor" type="Control" parent="."]
 material = SubResource( 2 )
 margin_right = 40.0
@@ -145,3 +156,8 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2( -1, -1 )
+anchor_mode = 0
+current = true
