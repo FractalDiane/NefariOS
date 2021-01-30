@@ -1,0 +1,27 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "fosschili.txt"
+text = "28 oz crushed tomatoes
+29 oz diced tomatoes
+15 oz tomato sauce
+2 cups water
+
+1 lb beans
+2 lbs ground beef
+1 lb ground Italian sausage
+8 slices bacon
+1 onion
+5 stalks celery
+
+0.25 cup chili powder
+1 tbsp oregano
+2 tsps cumin
+1 tsp basil
+1 tsp cayenne
+1 tsp paprika
+1 tsp black pepper
+1 tsp crushed red pepper"

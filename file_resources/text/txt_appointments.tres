@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "appointments.txt"
+text = "APPOINTMENTS
+
+Dentist
+6 PM
+November 12, 1987
+Get tooth fixed (again)
+-------------------------------------------------------
+Meeting with Raymond
+4 PM
+November 18, 1987
+Discuss C64 zeropage layout and indirect addressing
+-------------------------------------------------------
+Jem Studios
+11 AM
+November 20, 1987
+Passport photo"
