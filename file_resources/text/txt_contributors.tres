@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "contributors.txt"
+text = "Thank you to all our contributors who have made this project possible.
+
+Jeff Briggs
+Clive Stroustrup
+Inez Price
+Esmeralda Starling
+Pascal Lister
+Rachel Ainsley
+Zayne Deering
+Keifer Lee
+Kim Nguyen
+Renee Ritter"

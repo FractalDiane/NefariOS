@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "flit_intro_script.txt"
+text = "E: Name, please.
+F: Flit.
+
+F: What else do you need?
+E: Nothing. That's it.
+
+E: All right, kid...
+F: Kid? I'm only 147!
+E: Whatever.
+E: You're the new member of our... staff.
+E: The old guy was really bad at this. I don't think you could possibly do worse than him.
+E: Don't disappoint me.
+F: ...
+
+E: So, I'm assuming you want an overview of your position?
+[Yes] [No]
+
+[ADD MORE LATER]"
