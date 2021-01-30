@@ -2,3 +2,4 @@
 .vs/
 .vscode/
 **/*.blend1
+tools/directory_graph/editor_theme.tres
