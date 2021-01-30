@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "ENTRY_19.notebook"
+text = "////////////////////////////////////////
+ENTRY 19
+////////////////////////////////////////
+
+The grass is red. Green it is not the grass. Fall is the season, the ground what has been fallen onto. But if fall, shouldn't have fallen onto the grass? Grass is itchy though, itchy as my back. Use an extra hand to scratch back, was good and useful.
+
+Tonight is dark, dark like the night sky. The vast above shines no light today, for inside this home it reaches not. Inside this home is us. We are here together.
+
+Us.
+
+////////////////////////////////////////
+END ENTRY
+////////////////////////////////////////"
