@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "FTest.c"
+text = "/* FTest.h */
+
+#include <string.h>
+#include <stdio.h>
+#include <stdbool.h>
+
+#define __CL_BLUE \"\\033[0;36m\"
+#define __CL_RED \"\\033[0;31m\"
+#define __CL_RESET \"\\033[0m\"
+
+#define __LOG_OK(test_name) fputs(__CL_BLUE \"[ OK ] \" __CL_RESET #test_name, stdout)
+#define __LOG_FAIL(test_name, expected, got) fputs(__CL_RED \"[ FAILED ] \" __CL_RESET #test_name, stdout)
+
+#define TEST(name) 	\\
+typedef struct { 	\\
+	bool pass_state;\\
+					\\
+					\\
+					\\
+					\\
+					\\
+					\\
+} __FTEST_##name;	\\
+
+TEST(StringTest)"

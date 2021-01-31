@@ -45,6 +45,9 @@ func exec(executable: String, args: Array = []) -> void:
 
 
 func default_open_file(file: NOSFile) -> void:
+	if file.is_corrupted:
+		return # Add fake error message later
+		
 	if file is NOSTextFile:
 		exec("less", [file])
 	elif file is NOSImageFile:

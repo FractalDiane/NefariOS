@@ -15,4 +15,6 @@ text = "- 6502 uses little endian
 - X and Y
 -- used for addressing and fast storage
 
-- "
+- Instructions require cycles
+-- 2-7 cycles per instruction
+-- less cycles = better"

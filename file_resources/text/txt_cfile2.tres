@@ -1,0 +1,52 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "String.h"
+text = "#pragma once
+
+#include <string.h>
+#include <stdlib.h>
+
+#define STRING_DEFAULT_LENGTH 10
+
+typedef struct {
+	char* str;
+	size_t length;
+	size_t _capacity;
+} String;
+
+
+String String_empty() {
+	String str;
+	str.str = calloc(STRING_DEFAULT_LENGTH, sizeof(char));
+	str.str[0] = '\\0';
+	str.length = 0;
+	str._capacity = STRING_DEFAULT_LENGTH;
+	return str;
+}
+
+String String_new(const char* from) {
+	String str;
+	size_t len = strlen(from);
+	str.str = calloc(len + 11, sizeof(char));
+	memcpy(str.str, from, len + 1);
+	str.length = len;
+	str._capacity = len + 11;
+	return str;
+}
+
+void String_append(String* str, const char* to_append) {
+	size_t len = strlen(to_append);
+	if (str->length + len + 1 > str->_capacity) {
+		
+	} else {
+		memcpy(str->str, to_append, len + 1);
+	}
+}
+
+void String_delete(String* str) {
+	free(str->str);
+}"

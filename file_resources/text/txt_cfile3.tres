@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "hand_assembly.c"
+text = "#include <stdio.h>
+#include <stdint.h>
+
+int main() {
+	FILE* file = fopen(\"badidea.prg\", \"wb\");
+
+	uint8_t bytes[] = {
+		0x00, 0x10, // * = $1000
+		0xee, 0x20, 0xd0, // inc $d020
+		0x60 // rts
+		};
+
+	for (int i = 0; i < 6; i++) {
+		fwrite(bytes + i, sizeof(uint8_t), 1, file);
+	}
+
+	fclose(file);
+}"

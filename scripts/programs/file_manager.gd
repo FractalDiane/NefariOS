@@ -5,6 +5,8 @@ var window: Panel
 var directory_list: VBoxContainer
 var player: Player
 
+var previous_directory: DirectoryNode = null
+
 
 func _exec(args: Array) -> void:
 	window = open_root_window("FILE MANAGER")
@@ -24,6 +26,10 @@ func sort(a: NOSFile, b: NOSFile) -> bool:
 	return a.file_name < b.file_name
 
 func display_directory(dir: DirectoryNode) -> void:
+	if previous_directory != null:
+		for f in previous_directory.contents:
+			f.disconnect("name_updated", self, "_on_file_name_updated")
+			
 	for child in directory_list.get_children():
 		child.queue_free()
 	
@@ -45,7 +51,14 @@ func display_directory(dir: DirectoryNode) -> void:
 		button.text = f.file_name.to_upper()
 		directory_list.add_child(button)
 		button.connect("pressed", self, "_on_file_clicked", [f])
-
+		
+		f.connect("name_updated", self, "_on_file_name_updated", [button])
+		
+	previous_directory = dir
+		
+		
+func _on_file_name_updated(file: NOSFile, button: Button) -> void:
+	button.text = file.file_name
 
 
 func _on_directory_clicked(dir: DirectoryNode) -> void:

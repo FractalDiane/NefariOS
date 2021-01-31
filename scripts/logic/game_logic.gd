@@ -16,6 +16,9 @@ var running_main_scene := false
 func _ready() -> void:
 	randomize()
 	load_graph()
+	for node in nodes:
+		for file in node.contents:
+			file.subscribe(get_tree())
 	player.connect("directory_changed", self, "_on_player_directory_changed")
 
 
