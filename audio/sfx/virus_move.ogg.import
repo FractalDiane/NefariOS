@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/virus_move.ogg-4ad211bc41a5f1bef590120b61563e6e.oggstr"
+
+[deps]
+
+source_file="res://audio/sfx/virus_move.ogg"
+dest_files=[ "res://.import/virus_move.ogg-4ad211bc41a5f1bef590120b61563e6e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

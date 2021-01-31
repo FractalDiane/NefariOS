@@ -77,10 +77,10 @@ func play_sound_oneshot(sound: AudioStream, pitch: float = 1.0, volume: float = 
 
 
 func _on_player_directory_changed(new_dir: DirectoryNode) -> void:
-	virus_countdown -= 1
-	if virus_countdown <= 0:
-		Virus.advance_corruption()
-		virus_countdown = virus_countdown_limit
+	#virus_countdown -= 1
+	#if virus_countdown <= 0:
+	Virus.advance_corruption()
+		#virus_countdown = virus_countdown_limit
 
 	if running_main_scene:
 		(get_tree().current_scene.get_node("Viewport/Screen") as Screen).show_virus_particles(Virus.current_location == new_dir)
