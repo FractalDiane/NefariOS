@@ -30,6 +30,7 @@ func open_root_window(title: String) -> Panel:
 	label.rect_size       = Vector2()
 	label.rect_position.y = -15
 	label.rect_position.x = floor(label.rect_position.x / 9) * 9
+	label.add_color_override("font_color", Color())
 	
 	get_parent().add_child(window)
 	

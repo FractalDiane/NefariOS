@@ -29,7 +29,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=4]
 shader = SubResource( 3 )
-shader_param/phosphor_color = Color( 1, 0, 0, 1 )
+shader_param/phosphor_color = Color( 0, 1, 0, 1 )
 
 [node name="Screen" type="Control"]
 anchor_right = 1.0
@@ -151,10 +151,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ColorRect4" type="ColorRect" parent="."]
+margin_left = -72.0
+margin_bottom = 400.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = -72.0
 margin_top = 400.0
 margin_right = 792.0
 margin_bottom = 432.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+margin_left = -72.0
+margin_top = -32.0
+margin_right = 792.0
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false

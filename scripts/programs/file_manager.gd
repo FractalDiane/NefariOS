@@ -25,6 +25,8 @@ func display_directory(dir: DirectoryNode) -> void:
 	for child in directory_list.get_children():
 		child.queue_free()
 	
+	window.get_child(0).text = dir.directory_name
+	
 	for _d in dir.links:
 		var d := _d as DirectoryNode
 		var button := Button.new()
