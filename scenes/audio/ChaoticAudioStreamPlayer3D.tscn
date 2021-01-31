@@ -4,3 +4,4 @@
 
 [node name="ChaoticAudioStreamPlayer3D" type="AudioStreamPlayer3D"]
 script = ExtResource( 2 )
+bus_out = "Ambience"
