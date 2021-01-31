@@ -32,7 +32,7 @@ _global_script_classes=[ {
 "base": "Button",
 "class": "FileButton",
 "language": "GDScript",
-"path": "res://scripts/programs/file_button.gd"
+"path": "res://scripts/ui/file_button.gd"
 }, {
 "base": "Label",
 "class": "HighlightLabel",

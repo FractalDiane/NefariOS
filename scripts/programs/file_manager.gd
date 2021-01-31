@@ -31,7 +31,7 @@ func display_directory(dir: DirectoryNode) -> void:
 	
 	for _d in dir.links:
 		var d := _d as DirectoryNode
-		var button := Button.new()
+		var button := FileButton.new()
 		button.align = Button.ALIGN_LEFT
 		button.text = d.directory_name.to_upper() + " ->"
 		directory_list.add_child(button)
@@ -40,7 +40,7 @@ func display_directory(dir: DirectoryNode) -> void:
 	dir.contents.sort_custom(self, "sort")
 	
 	for f in dir.contents:
-		var button := Button.new()
+		var button := FileButton.new()
 		button.align = Button.ALIGN_LEFT
 		button.text = f.file_name.to_upper()
 		directory_list.add_child(button)
