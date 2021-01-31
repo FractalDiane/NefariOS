@@ -10,6 +10,7 @@ var nodes: Array
 var player := Player.new()
 
 var virus_countdown := virus_countdown_limit
+var running_main_scene := false
 
 
 func _ready() -> void:
@@ -57,4 +58,7 @@ func _on_player_directory_changed(new_dir: DirectoryNode) -> void:
 		Virus.advance_corruption()
 		virus_countdown = virus_countdown_limit
 
-	(get_tree().current_scene.get_node("Viewport/Screen") as Screen).show_virus_particles(Virus.current_location == new_dir)
+	if running_main_scene:
+		(get_tree().current_scene.get_node("Viewport/Screen") as Screen).show_virus_particles(Virus.current_location == new_dir)
+	else:
+		(get_tree().current_scene as Screen).show_virus_particles(Virus.current_location == new_dir)

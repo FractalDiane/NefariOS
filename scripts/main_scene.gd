@@ -13,6 +13,8 @@ var boot_text := [
 func _ready() -> void:
 	if startup_sequence:
 		($AnimationPlayer as AnimationPlayer).play("Startup")
+	
+	GameLogic.running_main_scene = true
 
 
 func add_boot_text(index: int) -> void:
