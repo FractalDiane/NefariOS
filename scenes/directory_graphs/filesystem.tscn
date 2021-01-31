@@ -4,11 +4,11 @@
 [ext_resource path="res://tools/directory_graph/directory_graph_node.tscn" type="PackedScene" id=2]
 [ext_resource path="res://tools/directory_graph/directory_graph.gd" type="Script" id=3]
 
-[node name="GraphEdit" type="GraphEdit"]
+[node name="@GraphEdit@325" type="GraphEdit"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 right_disconnects = true
-scroll_offset = Vector2( 367, -111 )
+scroll_offset = Vector2( 331, 147 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
@@ -79,16 +79,6 @@ connections = [ {
 "to": "@GraphNode@29",
 "to_port": 0
 }, {
-"from": "@GraphNode@428",
-"from_port": 0,
-"to": "@GraphNode@236",
-"to_port": 0
-}, {
-"from": "@GraphNode@428",
-"from_port": 1,
-"to": "@GraphNode@240",
-"to_port": 0
-}, {
 "from": "@GraphNode@236",
 "from_port": 0,
 "to": "@GraphNode@216",
@@ -144,11 +134,6 @@ connections = [ {
 "to": "@GraphNode@264",
 "to_port": 0
 }, {
-"from": "@GraphNode@29",
-"from_port": 0,
-"to": "@GraphNode@428",
-"to_port": 0
-}, {
 "from": "@GraphNode@21",
 "from_port": 0,
 "to": "@GraphNode@523",
@@ -158,60 +143,33 @@ connections = [ {
 "from_port": 0,
 "to": "@GraphNode@292",
 "to_port": 0
+}, {
+"from": "@GraphNode@136",
+"from_port": 0,
+"to": "@GraphNode@432",
+"to_port": 0
+}, {
+"from": "@GraphNode@29",
+"from_port": 0,
+"to": "@GraphNode@428",
+"to_port": 0
+}, {
+"from": "@GraphNode@428",
+"from_port": 0,
+"to": "@GraphNode@236",
+"to_port": 0
+}, {
+"from": "@GraphNode@428",
+"from_port": 1,
+"to": "@GraphNode@240",
+"to_port": 0
 } ]
 
-[node name="@GraphNode@136" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 313.0
-margin_top = -809.0
-margin_right = 600.0
-margin_bottom = -510.0
-mouse_filter = 1
-title = "Directory"
-offset = Vector2( 680, -920 )
-show_close = true
-resizable = true
-slot/0/left_enabled = true
-slot/0/left_type = 0
-slot/0/left_color = Color( 1, 1, 1, 1 )
-slot/0/right_enabled = false
-slot/0/right_type = 0
-slot/0/right_color = Color( 0, 0, 0, 1 )
-slot/1/left_enabled = false
-slot/1/left_type = 0
-slot/1/left_color = Color( 1, 1, 1, 1 )
-slot/1/right_enabled = false
-slot/1/right_type = 0
-slot/1/right_color = Color( 1, 1, 1, 1 )
-slot/2/left_enabled = false
-slot/2/left_type = 0
-slot/2/left_color = Color( 1, 1, 1, 1 )
-slot/2/right_enabled = false
-slot/2/right_type = 0
-slot/2/right_color = Color( 1, 1, 1, 1 )
-slot/3/left_enabled = false
-slot/3/left_type = 0
-slot/3/left_color = Color( 1, 1, 1, 1 )
-slot/3/right_enabled = false
-slot/3/right_type = 0
-slot/3/right_color = Color( 1, 1, 1, 1 )
-slot/4/left_enabled = false
-slot/4/left_type = 0
-slot/4/left_color = Color( 1, 1, 1, 1 )
-slot/4/right_enabled = false
-slot/4/right_type = 0
-slot/4/right_color = Color( 1, 1, 1, 1 )
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-directory_name = "Ideas"
-file_paths = [ "res://file_resources/text/txt_game_script.tres" ]
-
 [node name="@GraphNode@29" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -47.0
-margin_top = 591.0
-margin_right = 240.0
-margin_bottom = 911.0
+margin_left = -11.0
+margin_top = 333.0
+margin_right = 276.0
+margin_bottom = 653.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 320, 480 )
@@ -268,10 +226,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@140" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 633.0
-margin_top = -409.0
-margin_right = 920.0
-margin_bottom = -89.0
+margin_left = 669.0
+margin_top = -667.0
+margin_right = 956.0
+margin_bottom = -347.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1000, -520 )
@@ -328,10 +286,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="GraphNode" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -427.0
-margin_top = -129.0
-margin_right = -140.0
-margin_bottom = 254.0
+margin_left = -391.0
+margin_top = -387.0
+margin_right = -104.0
+margin_bottom = -4.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( -60, -240 )
@@ -427,10 +385,10 @@ margin_bottom = 378.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@21" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -47.0
-margin_top = -109.0
-margin_right = 240.0
-margin_bottom = 211.0
+margin_left = -11.0
+margin_top = -367.0
+margin_right = 276.0
+margin_bottom = -47.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 320, -220 )
@@ -487,10 +445,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@989" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 973.0
-margin_top = -409.0
-margin_right = 1260.0
-margin_bottom = -89.0
+margin_left = 1009.0
+margin_top = -667.0
+margin_right = 1296.0
+margin_bottom = -347.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1340, -520 )
@@ -547,10 +505,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@428" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 413.0
-margin_top = 671.0
-margin_right = 700.0
-margin_bottom = 1012.0
+margin_left = 449.0
+margin_top = 413.0
+margin_right = 736.0
+margin_bottom = 754.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 780, 560 )
@@ -603,7 +561,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 directory_name = "Random Stuff"
-file_paths = [  ]
+file_paths = [ "res://file_resources/image/img_random9.tres" ]
 
 [node name="DirectoryNode" type="Control" parent="@GraphNode@428"]
 margin_left = 28.0
@@ -620,10 +578,10 @@ margin_bottom = 336.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@240" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 813.0
-margin_top = 1031.0
-margin_right = 1100.0
-margin_bottom = 1330.0
+margin_left = 849.0
+margin_top = 773.0
+margin_right = 1136.0
+margin_bottom = 1072.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1180, 920 )
@@ -667,10 +625,10 @@ directory_name = "642"
 file_paths = [ "res://file_resources/image/img_label2.tres", "res://file_resources/image/img_random1.tres" ]
 
 [node name="@GraphNode@216" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 1213.0
-margin_top = 371.0
-margin_right = 1500.0
-margin_bottom = 670.0
+margin_left = 1249.0
+margin_top = 113.0
+margin_right = 1536.0
+margin_bottom = 412.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1580, 260 )
@@ -714,10 +672,10 @@ directory_name = "1"
 file_paths = [ "res://file_resources/image/img_random6.tres" ]
 
 [node name="@GraphNode@236" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 833.0
-margin_top = 611.0
-margin_right = 1120.0
-margin_bottom = 973.0
+margin_left = 869.0
+margin_top = 353.0
+margin_right = 1156.0
+margin_bottom = 715.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1200, 500 )
@@ -800,10 +758,10 @@ margin_bottom = 357.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@224" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 1473.0
-margin_top = 1171.0
-margin_right = 1760.0
-margin_bottom = 1470.0
+margin_left = 1509.0
+margin_top = 913.0
+margin_right = 1796.0
+margin_bottom = 1212.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1840, 1060 )
@@ -847,10 +805,10 @@ directory_name = "3"
 file_paths = [ "res://file_resources/image/img_random8.tres" ]
 
 [node name="@GraphNode@228" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 1893.0
-margin_top = 391.0
-margin_right = 2180.0
-margin_bottom = 690.0
+margin_left = 1929.0
+margin_top = 133.0
+margin_right = 2216.0
+margin_bottom = 432.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 2260, 280 )
@@ -894,10 +852,10 @@ directory_name = "4"
 file_paths = [  ]
 
 [node name="@GraphNode@232" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 2093.0
-margin_top = 791.0
-margin_right = 2380.0
-margin_bottom = 1090.0
+margin_left = 2129.0
+margin_top = 533.0
+margin_right = 2416.0
+margin_bottom = 832.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 2460, 680 )
@@ -941,10 +899,10 @@ directory_name = "5"
 file_paths = [  ]
 
 [node name="@GraphNode@220" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 1393.0
-margin_top = 731.0
-margin_right = 1680.0
-margin_bottom = 1093.0
+margin_left = 1429.0
+margin_top = 473.0
+margin_right = 1716.0
+margin_bottom = 835.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1760, 620 )
@@ -1027,10 +985,10 @@ margin_bottom = 357.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@256" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 2493.0
-margin_top = 471.0
-margin_right = 2780.0
-margin_bottom = 770.0
+margin_left = 2529.0
+margin_top = 213.0
+margin_right = 2816.0
+margin_bottom = 512.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 2860, 360 )
@@ -1074,10 +1032,10 @@ directory_name = "7"
 file_paths = [  ]
 
 [node name="@GraphNode@252" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 2593.0
-margin_top = 1191.0
-margin_right = 2880.0
-margin_bottom = 1490.0
+margin_left = 2629.0
+margin_top = 933.0
+margin_right = 2916.0
+margin_bottom = 1232.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 2960, 1080 )
@@ -1121,10 +1079,10 @@ directory_name = "9"
 file_paths = [  ]
 
 [node name="@GraphNode@244" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 2093.0
-margin_top = 1151.0
-margin_right = 2380.0
-margin_bottom = 1513.0
+margin_left = 2129.0
+margin_top = 893.0
+margin_right = 2416.0
+margin_bottom = 1255.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 2460, 1040 )
@@ -1207,10 +1165,10 @@ margin_bottom = 357.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@260" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 3013.0
-margin_top = 871.0
-margin_right = 3300.0
-margin_bottom = 1191.0
+margin_left = 3049.0
+margin_top = 613.0
+margin_right = 3336.0
+margin_bottom = 933.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 3380, 760 )
@@ -1267,10 +1225,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@248" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 2593.0
-margin_top = 831.0
-margin_right = 2880.0
-margin_bottom = 1151.0
+margin_left = 2629.0
+margin_top = 573.0
+margin_right = 2916.0
+margin_bottom = 893.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 2960, 720 )
@@ -1327,10 +1285,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@264" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 3373.0
-margin_top = 891.0
-margin_right = 3660.0
-margin_bottom = 1190.0
+margin_left = 3409.0
+margin_top = 633.0
+margin_right = 3696.0
+margin_bottom = 932.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 3740, 780 )
@@ -1374,10 +1332,10 @@ directory_name = "NBV"
 file_paths = [ "res://file_resources/text/secrets/txt_secret_neckbleed.tres" ]
 
 [node name="@GraphNode@249" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 313.0
-margin_top = -409.0
-margin_right = 600.0
-margin_bottom = -89.0
+margin_left = 349.0
+margin_top = -667.0
+margin_right = 636.0
+margin_bottom = -347.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 680, -520 )
@@ -1434,10 +1392,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@148" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 1433.0
-margin_top = -29.0
-margin_right = 1720.0
-margin_bottom = 270.0
+margin_left = 1469.0
+margin_top = -287.0
+margin_right = 1756.0
+margin_bottom = 12.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1800, -140 )
@@ -1478,13 +1436,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 directory_name = "Infinitesimality Audio Trimming Software"
-file_paths = [ "res://file_resources/text/txt_audioreadme.tres" ]
+file_paths = [ "res://file_resources/text/txt_audioreadme.tres", "res://file_resources/decorative/dec_audio.tres", "res://file_resources/decorative/dec_soundfile1.tres", "res://file_resources/decorative/dec_soundfile2.tres", "res://file_resources/decorative/dec_soundfile3.tres", "res://file_resources/decorative/dec_soundfile4.tres", "res://file_resources/decorative/dec_soundfile5.tres" ]
 
 [node name="@GraphNode@144" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 773.0
-margin_top = -69.0
-margin_right = 1060.0
-margin_bottom = 251.0
+margin_left = 809.0
+margin_top = -327.0
+margin_right = 1096.0
+margin_bottom = -7.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1140, -180 )
@@ -1541,10 +1499,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@523" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 333.0
-margin_top = -69.0
-margin_right = 620.0
-margin_bottom = 230.0
+margin_left = 369.0
+margin_top = -327.0
+margin_right = 656.0
+margin_bottom = -28.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 700, -180 )
@@ -1588,10 +1546,10 @@ directory_name = "Test"
 file_paths = [ "res://file_resources/image/img_random3.tres", "res://file_resources/image/img_random4.tres", "res://file_resources/image/img_random5.tres" ]
 
 [node name="@GraphNode@25" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -47.0
-margin_top = 231.0
-margin_right = 240.0
-margin_bottom = 551.0
+margin_left = -11.0
+margin_top = -27.0
+margin_right = 276.0
+margin_bottom = 293.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 320, 120 )
@@ -1648,10 +1606,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@292" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 513.0
-margin_top = 291.0
-margin_right = 800.0
-margin_bottom = 590.0
+margin_left = 549.0
+margin_top = 33.0
+margin_right = 836.0
+margin_bottom = 332.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 880, 180 )
@@ -1695,10 +1653,10 @@ directory_name = "vemax"
 file_paths = [ "res://file_resources/decorative/dec_vemax.tres", "res://file_resources/text/txt_contributors.tres", "res://file_resources/text/txt_mitlicense.tres" ]
 
 [node name="@GraphNode@33" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -47.0
-margin_top = -549.0
-margin_right = 240.0
-margin_bottom = -166.0
+margin_left = -11.0
+margin_top = -807.0
+margin_right = 276.0
+margin_bottom = -424.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 320, -660 )
@@ -1779,9 +1737,115 @@ margin_top = 337.0
 margin_right = 259.0
 margin_bottom = 357.0
 rect_min_size = Vector2( 0, 20 )
+
+[node name="@GraphNode@136" type="GraphNode" parent="." instance=ExtResource( 2 )]
+margin_left = 369.0
+margin_top = -1107.0
+margin_right = 656.0
+margin_bottom = -787.0
+mouse_filter = 1
+title = "Directory"
+offset = Vector2( 700, -960 )
+show_close = true
+resizable = true
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 0, 0, 0, 1 )
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color( 1, 1, 1, 1 )
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color( 1, 1, 1, 1 )
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color( 1, 1, 1, 1 )
+slot/3/left_enabled = false
+slot/3/left_type = 0
+slot/3/left_color = Color( 1, 1, 1, 1 )
+slot/3/right_enabled = false
+slot/3/right_type = 0
+slot/3/right_color = Color( 1, 1, 1, 1 )
+slot/4/left_enabled = false
+slot/4/left_type = 0
+slot/4/left_color = Color( 1, 1, 1, 1 )
+slot/4/right_enabled = false
+slot/4/right_type = 0
+slot/4/right_color = Color( 1, 1, 1, 1 )
+slot/5/left_enabled = false
+slot/5/left_type = 0
+slot/5/left_color = Color( 0, 0, 0, 1 )
+slot/5/right_enabled = true
+slot/5/right_type = 0
+slot/5/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+directory_name = "Ideas"
+file_paths = [ "res://file_resources/text/txt_game_script.tres" ]
+
+[node name="DirectoryNode" type="Control" parent="@GraphNode@136"]
+margin_left = 28.0
+margin_top = 295.0
+margin_right = 259.0
+margin_bottom = 315.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="@GraphNode@432" type="GraphNode" parent="." instance=ExtResource( 2 )]
+margin_left = 789.0
+margin_top = -1107.0
+margin_right = 1076.0
+margin_bottom = -808.0
+mouse_filter = 1
+title = "Directory"
+offset = Vector2( 1120, -960 )
+show_close = true
+resizable = true
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 0, 0, 0, 1 )
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color( 1, 1, 1, 1 )
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color( 1, 1, 1, 1 )
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color( 1, 1, 1, 1 )
+slot/3/left_enabled = false
+slot/3/left_type = 0
+slot/3/left_color = Color( 1, 1, 1, 1 )
+slot/3/right_enabled = false
+slot/3/right_type = 0
+slot/3/right_color = Color( 1, 1, 1, 1 )
+slot/4/left_enabled = false
+slot/4/left_type = 0
+slot/4/left_color = Color( 1, 1, 1, 1 )
+slot/4/right_enabled = false
+slot/4/right_type = 0
+slot/4/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+directory_name = "Poetry"
+file_paths = [ "res://file_resources/text/txt_entry01.tres", "res://file_resources/text/txt_entry13.tres", "res://file_resources/text/txt_entry19.tres" ]
 [connection signal="connection_request" from="." to="." method="_on_GraphEdit_connection_request"]
 [connection signal="disconnection_request" from="." to="." method="_on_GraphEdit_disconnection_request"]
-[connection signal="close_request" from="@GraphNode@136" to="@GraphNode@136" method="_on_GraphNode_close_request"]
 [connection signal="close_request" from="@GraphNode@29" to="@GraphNode@29" method="_on_GraphNode_close_request"]
 [connection signal="close_request" from="@GraphNode@140" to="@GraphNode@140" method="_on_GraphNode_close_request"]
 [connection signal="close_request" from="GraphNode" to="GraphNode" method="_on_GraphNode_close_request"]
@@ -1808,3 +1872,5 @@ rect_min_size = Vector2( 0, 20 )
 [connection signal="close_request" from="@GraphNode@25" to="@GraphNode@25" method="_on_GraphNode_close_request"]
 [connection signal="close_request" from="@GraphNode@292" to="@GraphNode@292" method="_on_GraphNode_close_request"]
 [connection signal="close_request" from="@GraphNode@33" to="@GraphNode@33" method="_on_GraphNode_close_request"]
+[connection signal="close_request" from="@GraphNode@136" to="@GraphNode@136" method="_on_GraphNode_close_request"]
+[connection signal="close_request" from="@GraphNode@432" to="@GraphNode@432" method="_on_GraphNode_close_request"]
