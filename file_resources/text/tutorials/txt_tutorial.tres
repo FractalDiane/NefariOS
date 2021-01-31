@@ -10,4 +10,6 @@ is_secret = false
 text = "- Left click a file or directory to open it.
 - Drag the window around to move it.
 - When you find a target file, right click on it and click \"transfer.\"
-- Make sure the virus doesn't corrupt too many target files."
+- Make sure the virus doesn't corrupt too many target files.
+Look at the light at the bottom right for an indication
+of how many of them are corrupted."
