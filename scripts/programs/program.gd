@@ -38,6 +38,13 @@ func open_root_window(title: String) -> Panel:
 	return window
 
 
+func open_choice_menu(position: Vector2, choices: Array) -> ChoiceMenu:
+	var menu := ChoiceMenu.new(choices)
+	get_parent().add_child(menu)
+	menu.rect_global_position = ScreenHelper.align_and_clamp(position)
+	return menu
+
+
 func exec(executable: String, args: Array = []) -> void:
 	var script := load("res://scripts/programs/" + executable + ".gd") as GDScript
 	var program := script.new() as Program

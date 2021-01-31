@@ -42,18 +42,18 @@ expand_margin_top = 16.0
 expand_margin_bottom = 16.0
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="StyleBoxEmpty" id=7]
+[sub_resource type="StyleBoxEmpty" id=8]
 
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="StyleBoxFlat" id=9]
 content_margin_right = 9.0
 bg_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="ImageTexture" id=9]
+[sub_resource type="ImageTexture" id=10]
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0, 0, 0, 1 )
 border_width_left = 6
 border_width_top = 14
@@ -136,7 +136,7 @@ TextEdit/icons/space = null
 TextEdit/icons/tab = null
 TextEdit/styles/completion = null
 TextEdit/styles/focus = null
-TextEdit/styles/normal = SubResource( 11 )
+TextEdit/styles/normal = SubResource( 7 )
 TextEdit/styles/read_only = null
 ToolButton/colors/font_color = Color( 0, 0, 0, 1 )
 ToolButton/colors/font_color_disabled = Color( 0.9, 0.95, 1, 0.3 )
@@ -144,11 +144,11 @@ ToolButton/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
 ToolButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
 ToolButton/constants/hseparation = 0
 ToolButton/fonts/font = null
-ToolButton/styles/disabled = SubResource( 7 )
-ToolButton/styles/focus = SubResource( 7 )
-ToolButton/styles/hover = SubResource( 7 )
-ToolButton/styles/normal = SubResource( 7 )
-ToolButton/styles/pressed = SubResource( 7 )
+ToolButton/styles/disabled = SubResource( 8 )
+ToolButton/styles/focus = SubResource( 8 )
+ToolButton/styles/hover = SubResource( 8 )
+ToolButton/styles/normal = SubResource( 8 )
+ToolButton/styles/pressed = SubResource( 8 )
 VScrollBar/icons/decrement = null
 VScrollBar/icons/decrement_highlight = null
 VScrollBar/icons/increment = null
@@ -156,7 +156,7 @@ VScrollBar/icons/increment_highlight = null
 VScrollBar/styles/grabber = SubResource( 4 )
 VScrollBar/styles/grabber_highlight = SubResource( 4 )
 VScrollBar/styles/grabber_pressed = SubResource( 4 )
-VScrollBar/styles/scroll = SubResource( 8 )
+VScrollBar/styles/scroll = SubResource( 9 )
 VScrollBar/styles/scroll_focus = null
 WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
 WindowDialog/constants/close_h_ofs = 18
@@ -164,6 +164,6 @@ WindowDialog/constants/close_v_ofs = 18
 WindowDialog/constants/scaleborder_size = 4
 WindowDialog/constants/title_height = 14
 WindowDialog/fonts/title_font = null
-WindowDialog/icons/close = SubResource( 9 )
+WindowDialog/icons/close = SubResource( 10 )
 WindowDialog/icons/close_highlight = null
-WindowDialog/styles/panel = SubResource( 10 )
+WindowDialog/styles/panel = SubResource( 11 )
