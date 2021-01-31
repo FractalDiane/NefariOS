@@ -3,6 +3,8 @@ extends Node
 
 const TEST_GRAPH = preload("res://scenes/directory_graphs/test_graph.tscn")
 
+export(Array, Resource) var target_file_candidates: Array
+
 
 class Player:
 	var required_files: Array
@@ -16,14 +18,17 @@ var nodes: Array
 var player := Player.new()
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	load_graph()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-#	pass
+func generate_target_files() -> void:
+	player.required_files.clear()
+	var candidates := target_file_candidates.duplicate()
+	for _i in range(4):
+		var index := int(rand_range(0, len(candidates) - 1))
+		player.required_files.push_back(candidates[index])
+		candidates.remove(index)
 
 
 func load_graph() -> void:
