@@ -15,6 +15,7 @@ func _ready() -> void:
 		($AnimationPlayer as AnimationPlayer).play("Startup")
 	
 	GameLogic.running_main_scene = true
+	GameLogic.set_sticky_note_text()
 
 
 func add_boot_text(index: int) -> void:

@@ -29,6 +29,10 @@ func show_secret() -> void:
 	$TextSecret.show()
 	
 	
+func show_secret_2() -> void:
+	$TextSecret.set_text("\n\n\n\n\n\n\n\n\n\n\n              				                      RUN.")
+	
+	
 func show_virus_particles(show: bool) -> void:
 	($ParticlesVirus as Particles2D).set_emitting(show)
 

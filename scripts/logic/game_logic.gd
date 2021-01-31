@@ -27,7 +27,6 @@ func _ready() -> void:
 	player.connect("directory_changed", self, "_on_player_directory_changed")
 	
 	generate_target_files()
-	call_deferred("set_sticky_note_text")
 	
 		
 func generate_target_files() -> void:
@@ -111,7 +110,7 @@ func trigger_secret_ending() -> void:
 	var screen: Screen
 	if running_main_scene:
 		screen = get_tree().current_scene.get_node("Viewport/Screen") as Screen
-		$Sound/Stairs.play()
+		get_tree().current_scene.get_node("Sound/Stairs").play()
 	else:
 		screen = get_tree().current_scene as Screen
 		
