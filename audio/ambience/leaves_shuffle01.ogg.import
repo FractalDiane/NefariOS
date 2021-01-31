@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/leaves_shuffle01.ogg-e2bf71051ccba4cb278ea6c50a5c2347.oggstr"
+
+[deps]
+
+source_file="res://audio/ambience/leaves_shuffle01.ogg"
+dest_files=[ "res://.import/leaves_shuffle01.ogg-e2bf71051ccba4cb278ea6c50a5c2347.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
