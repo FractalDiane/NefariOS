@@ -7,18 +7,11 @@ const GRAPH_NODE := preload("res://tools/directory_graph/directory_graph_node.ts
 export(Array) var connections := []
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	add_valid_connection_type(0, 0)
 	
 	for connection in connections:
 		connect_node(connection["from"], connection["from_port"], connection["to"], connection["to_port"])
-	yield(get_tree(), "idle_frame")
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-#	pass
 
 
 func get_directories() -> Array:

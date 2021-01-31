@@ -84,14 +84,14 @@ func add_secret_file_found() ->  void:
 	
 	
 func play_sound_oneshot(sound: AudioStream, pitch: float = 1.0, volume: float = 0.0, bus: String = "Master") -> void:
-	var player := AudioStreamPlayer.new()
-	player.connect("finished", player, "queue_free")
-	player.stream = sound
-	player.pitch_scale = pitch
-	player.volume_db = volume
-	player.bus = bus
-	get_tree().root.add_child(player)
-	player.play()
+	var player_ := AudioStreamPlayer.new()
+	player_.connect("finished", player_, "queue_free")
+	player_.stream = sound
+	player_.pitch_scale = pitch
+	player_.volume_db = volume
+	player_.bus = bus
+	get_tree().root.add_child(player_)
+	player_.play()
 
 
 func _on_player_directory_changed(new_dir: DirectoryNode) -> void:

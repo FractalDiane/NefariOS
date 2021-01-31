@@ -12,6 +12,7 @@ onready var ports_begin := $PortsBegin
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	connect("close_request", self, "_on_GraphNode_close_request", [], CONNECT_REFERENCE_COUNTED)
 	$LineEdit.text = directory_name
 	for path in file_paths:
 		_on_AddFile_pressed()

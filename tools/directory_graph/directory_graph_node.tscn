@@ -93,7 +93,6 @@ margin_left = 16.0
 margin_top = 292.0
 margin_right = 247.0
 margin_bottom = 292.0
-[connection signal="close_request" from="." to="." method="_on_GraphNode_close_request"]
 [connection signal="pressed" from="AddFile" to="." method="_on_AddFile_pressed"]
 [connection signal="pressed" from="HBoxContainer/Add" to="." method="_on_Add_pressed"]
 [connection signal="pressed" from="HBoxContainer/Remove" to="." method="_on_Remove_pressed"]

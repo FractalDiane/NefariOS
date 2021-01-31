@@ -110,6 +110,12 @@ ScreenHelper="*res://scripts/screen_helper.gd"
 Virus="*res://scripts/logic/virus.gd"
 GlobalSignals="*res://scripts/global_signals.gd"
 
+[debug]
+
+gdscript/warnings/unused_argument=false
+gdscript/warnings/unused_signal=false
+gdscript/warnings/return_value_discarded=false
+
 [display]
 
 window/size/width=1280
