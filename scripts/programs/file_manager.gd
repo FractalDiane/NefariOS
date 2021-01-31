@@ -88,7 +88,6 @@ func open_file_right_click_menu(file: NOSFile, button: Button) -> void:
 			var source := (file as NOSTextFile).text
 			var split := source.split("\n")
 			source = SCRIPT_TEMPLATE % split.join("\n\t")
-			print(source)
 			var script := GDScript.new()
 			script.source_code = source
 			if (script.reload() != OK):
