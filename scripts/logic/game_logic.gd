@@ -33,14 +33,12 @@ func load_graph() -> void:
 	add_child(test_graph)
 	#yield(get_tree(), "idle_frame")
 	nodes = test_graph.get_directories()
-	print(nodes)
 	test_graph.queue_free()
 	
 	for node in nodes:
 		if node.directory_name == "ROOT":
 			player.current_directory = node
 			break
-	print(player.current_directory)
 	
 	
 func play_sound_oneshot(sound: AudioStream, pitch: float = 1.0, volume: float = 0.0) -> void:
