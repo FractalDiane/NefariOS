@@ -1,0 +1,24 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "backup.log"
+can_be_corrupted = true
+is_secret = false
+text = "[2021-01-19_00h00m] 2021-01-18_16h24m-manual.zip was successfully moved to s3.
+[2021-01-20_00h00m] 2021-01-18_16h24m-manual.zip was successfully moved to s3.
+[2021-01-21_00h00m] 2021-01-18_16h24m-manual.zip was successfully moved to s3.
+[2021-01-22_00h00m] 2021-01-18_16h24m-manual.zip was successfully moved to s3.
+[2021-01-22_00h00m] 2021-01-18_16h24m-manual.zip was successfully moved to s3.
+[2021-01-23_00h00m] 2021-01-18_16h24m-manual.zip was successfully moved to s3.
+[2021-01-24_00h00m] 2021-01-18_16h24m-manual.zip was successfully moved to s3.
+[2021-01-25_00h00m] 2021-01-18_16h24m-manual.zip was successfully moved to s3.
+[2021-01-26_00h00m] 2021-01-18_16h24m-manual.zip was successfully moved to s3.
+[2021-01-27_00h00m] 2021-01-18_16h24m-manual.zip was successfully moved to s3.
+[2021-01-28_00h00m] 2021-01-18_16h24m-manual.zip was successfully moved to s3.
+[2021-01-29_00h00m] 2021-01-18_16h24m-manual.zip was successfully moved to s3.
+[2021-01-29_00h00m] 2021-01-18_16h24m-manual.zip was successfully moved to s3.
+[2021-01-30_00h00m] 2021-01-18_16h24m-manual.zip was successfully moved to s3.
+[2021-01-31_00h00m] 2021-01-18_16h24m-manual.zip was successfully moved to s3."

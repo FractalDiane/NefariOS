@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "df.log"
+can_be_corrupted = true
+is_secret = false
+text = "Filesystem      1K-blocks     Used Available Use% Mounted on
+/dev/root         7959716  4650512   3292820  59% /
+devtmpfs           944540        0    944540   0% /dev
+tmpfs              963964        0    963964   0% /dev/shm
+tmpfs              192796     1012    191784   1% /run
+tmpfs                5120        0      5120   0% /run/lock
+tmpfs              963964        0    963964   0% /sys/fs/cgroup
+/dev/nvme0n1p15     99801      138     99663   1% /boot/efi
+/dev/nvme1n1p1   33553388 24861584   8691804  75% /mnt/mc-serv
+/dev/loop1          88704    88704         0 100% /snap/core/10585
+/dev/loop0          50048    50048         0 100% /snap/core18/1936
+/dev/loop2          50048    50048         0 100% /snap/core18/1949"
