@@ -1,0 +1,59 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "egg.txt"
+can_be_corrupted = true
+is_secret = false
+text = "Optional: Poke a very small hole on the 
+bottom of the egg. This will allow water
+to enter the egg and envelope it for 
+easier peeling later.
+=== ASIDE ==========
+Stick a thumbtack through the bottom of
+your egg carton, with the pointy part 
+sticking up where an egg should be. 
+Hold the carton still and gently press 
+the egg down onto the thumbtack.
+==== END ASIDE =====
+Pour water into a small pot, enough to 
+cover an egg if one were to place one 
+in. Place on stove at high heat and 
+cover with lid to increase heat faster.
+
+Wait for water to come to a rolling 
+boil. It should be rapidly boiling with 
+large bubbles with no further changes in
+boiling pattern. Set a timer for 5 
+minutes.
+
+Gently lower the egg into the pot of 
+water with a sturdy utensil.
+If poked a hole, gently stir the water 
+with the egg for about 10 seconds to 
+encourage water to flow into the egg.
+
+Once timer goes off, immediately take 
+off the heat and strain into the sink.
+
+Using cold water, run it over the egg
+while in the pot to cool it down. 
+Continue for about 30 seconds. This 
+shocks the egg and contracts the egg 
+from the shell to make it easier to 
+peel.
+
+Peel the egg. I suggest gently cracking 
+the egg all around, then under cool 
+running water, peel. Be gentle as this 
+is a soft boiled egg; the yolk is soft 
+and has little structure.
+
+If the egg is broken, salvage what 
+remains. Unsalvageable toppings can 
+simply be excluded from the final ramen 
+if desired.
+
+Set aside for later use."

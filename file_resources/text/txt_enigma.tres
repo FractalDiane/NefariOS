@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "enigma.txt"
+can_be_corrupted = true
+is_secret = false
+text = "The inner machinations of my mind are an enigma.                                 *spilled milk*"

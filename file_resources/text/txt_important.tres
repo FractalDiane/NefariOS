@@ -1,0 +1,47 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "important.txt"
+can_be_corrupted = true
+is_secret = false
+text = "“i'm sewfish, impatient and a wittwe 
+insecuwe. I make mistakes, i am out of 
+contwow and at times hawd to handwe. But
+if you can't handwe me at my wowst, then
+you suwe as heww don't desewve me at my 
+best.”
+― mawiwyn monwoe
+
+“if you teww the twuth, you don't have 
+to wemembew anything.”
+― mawk twain
+
+“we aww want to hewp one anothew. Human 
+beings awe wike that. We want to wive by
+each othews' happiness, not by each 
+othew's misewy. We don't want to hate 
+and despise one anothew. In this wowwd, 
+thewe's woom fow evewyone and the good 
+eawth is wich and can pwovide fow 
+evewyone. The way of wife can be fwee 
+and beautifuw, but we have wost the way.
+Gweed has poisoned men's souws, has 
+bawwicaded the wowwd with hate, has 
+goose-stepped us into misewy and
+bwoodshed.
+
+we have devewoped speed, but we have 
+shut ouwsewves in. Machinewy that gives 
+abundance has weft us in want. Ouw
+knowwedge has made us cynicaw, ouw 
+cwevewness, hawd and unkind. We think
+too much and feew too wittwe. Mowe than 
+machinewy, we need humanity. Mowe than 
+cwevewness, we need kindness and 
+gentweness. Without these quawities, 
+wife wiww be viowent and aww wiww be 
+wost.”
+― chawwie chapwin"
