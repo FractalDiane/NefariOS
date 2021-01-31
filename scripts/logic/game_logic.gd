@@ -94,8 +94,6 @@ func add_target_file_corrupted() -> void:
 		
 func add_secret_file_found() ->  void:
 	secret_files_found += 1
-	if secret_files_found >= 3:
-		get_tree().change_scene("res://scenes/ending_2.tscn")
 	
 	
 func play_sound_oneshot(sound: AudioStream, pitch: float = 1.0, volume: float = 0.0, bus: String = "Master") -> void:
@@ -107,9 +105,23 @@ func play_sound_oneshot(sound: AudioStream, pitch: float = 1.0, volume: float = 
 	player_.bus = bus
 	get_tree().root.add_child(player_)
 	player_.play()
+	
+	
+func trigger_secret_ending() -> void:
+	var screen: Screen
+	if running_main_scene:
+		screen = get_tree().current_scene.get_node("Viewport/Screen") as Screen
+	else:
+		screen = get_tree().current_scene as Screen
+		
+	screen.set_screen_color(Color("#ff0000"))
+	screen.show_secret()
 
 
 func _on_player_directory_changed(new_dir: DirectoryNode) -> void:
+	if secret_files_found >= 3:
+		trigger_secret_ending()
+		
 	#virus_countdown -= 1
 	#if virus_countdown <= 0:
 	Virus.advance_corruption()

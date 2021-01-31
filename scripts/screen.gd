@@ -20,6 +20,15 @@ func set_screen_text(text_: String) -> void:
 	text.show()
 	
 	
+func set_screen_color(color: Color) -> void:
+	$BackBufferCopy2/Phosphor.get_material().set_shader_param("phosphor_color", color)
+	
+	
+func show_secret() -> void:
+	$ColorRectSecret.show()
+	$TextSecret.show()
+	
+	
 func show_virus_particles(show: bool) -> void:
 	($ParticlesVirus as Particles2D).set_emitting(show)
 

@@ -58,6 +58,9 @@ func default_open_file(file: NOSFile) -> void:
 	if file.is_corrupted:
 		return # Add fake error message later
 		
+	if file.is_secret:
+		GameLogic.add_secret_file_found()
+		
 	if file is NOSTextFile:
 		exec("less", [file])
 	elif file is NOSImageFile:

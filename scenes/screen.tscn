@@ -188,6 +188,47 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ColorRectSecret" type="ColorRect" parent="."]
+visible = false
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 722.0
+margin_bottom = 402.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextSecret" type="RichTextLabel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 400.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 718, 398 )
+custom_fonts/normal_font = ExtResource( 2 )
+custom_constants/line_separation = 0
+meta_underlined = false
+text = "                 
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				  DON'T THINK I DON'T KNOW WHAT YOU'RE DOING."
+scroll_active = false
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
 [node name="BackBufferCopy" type="BackBufferCopy" parent="."]
 copy_mode = 2
 

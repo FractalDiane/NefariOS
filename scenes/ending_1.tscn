@@ -1,6 +1,38 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/ending_1.gd" type="Script" id=1]
+[ext_resource path="res://audio/voice/ending_bad.ogg" type="AudioStream" id=2]
+[ext_resource path="res://audio/voice/ending_best.ogg" type="AudioStream" id=3]
+[ext_resource path="res://audio/voice/ending_meh.ogg" type="AudioStream" id=4]
+[ext_resource path="res://fonts/font_end.tres" type="DynamicFont" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Animation"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextScale:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 0.406126, 1 ),
+"update": 0,
+"values": [ Vector2( 0.8, 1 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextScale:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="Ending1" type="Control"]
 margin_right = 40.0
@@ -19,8 +51,46 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Timer" type="Timer" parent="."]
+[node name="VoiceBad" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="VoiceMeh" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="VoiceBest" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="TextScale" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 640, 360 )
+scale = Vector2( 0.8, 1 )
+
+[node name="Text" type="Label" parent="TextScale"]
+margin_left = -640.0
+margin_top = -232.0
+margin_right = 640.0
+margin_bottom = 232.0
+custom_fonts/font = ExtResource( 5 )
+text = "Hello there"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Animation = SubResource( 1 )
+
+[node name="TimerStart" type="Timer" parent="."]
 wait_time = 2.8
 one_shot = true
 autostart = true
-[connection signal="timeout" from="Timer" to="." method="play_ending"]
+
+[node name="TimerEnd" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+[connection signal="finished" from="VoiceBad" to="TimerEnd" method="start"]
+[connection signal="finished" from="VoiceMeh" to="TimerEnd" method="start"]
+[connection signal="finished" from="VoiceBest" to="TimerEnd" method="start"]
+[connection signal="timeout" from="TimerStart" to="." method="play_ending"]
+[connection signal="timeout" from="TimerEnd" to="." method="quit_game"]
