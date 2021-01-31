@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "game.gd"
+can_be_corrupted = true
+is_secret = false
+text = "# this language is stupid
+# godot should use a real language
+# like 6502 assembly
+var window = open_window(
+	Rect2(
+		Vector2(9*2, 16*2),
+		Vector2(9*20, 16*4)
+	),
+	\"Hello World\"
+)
+
+var label = Label.new()
+label.text = \"Hello World\"
+
+window.add_child(label)
+
+label.set_anchors_and_margins_preset(
+	Control.PRESET_CENTER
+)
+
+label.rect_position = ScreenHelper.align_and_clamp(
+	label.rect_position
+)"

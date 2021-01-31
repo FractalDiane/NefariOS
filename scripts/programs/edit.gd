@@ -22,6 +22,8 @@ func _exec(args: Array) -> void:
 	
 	text_edit = edit_scene.get_node("TextEdit")
 	text_edit.text = file.text
+	text_edit.caret_block_mode = true
+	text_edit.caret_blink = true
 	
 	edit_scene.get_node("PanelContainer/HBoxContainer/FILE").connect("pressed", self, "_on_button_pressed")
 
