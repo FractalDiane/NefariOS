@@ -20,6 +20,8 @@ func _exec(args: Array) -> void:
 	player = args[0]
 	display_directory(player.current_directory)
 
+func sort(a: NOSFile, b: NOSFile) -> bool:
+	return a.file_name < b.file_name
 
 func display_directory(dir: DirectoryNode) -> void:
 	for child in directory_list.get_children():
@@ -35,12 +37,15 @@ func display_directory(dir: DirectoryNode) -> void:
 		directory_list.add_child(button)
 		button.connect("pressed", self, "_on_directory_clicked", [d])
 	
+	dir.contents.sort_custom(self, "sort")
+	
 	for f in dir.contents:
 		var button := Button.new()
 		button.align = Button.ALIGN_LEFT
 		button.text = f.file_name.to_upper()
 		directory_list.add_child(button)
 		button.connect("pressed", self, "_on_file_clicked", [f])
+
 
 
 func _on_directory_clicked(dir: DirectoryNode) -> void:
