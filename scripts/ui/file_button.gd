@@ -12,8 +12,10 @@ func _ready() -> void:
 	
 
 func play_hover_sound() -> void:
-	GameLogic.play_sound_oneshot(sound1 if randf() > 0.5 else sound2, rand_range(0.9, 1.1), -8, "SFX")
+	GlobalSignals.emit_signal("play_keyboard_sound")
+	#GameLogic.play_sound_oneshot(sound1 if randf() > 0.5 else sound2, rand_range(0.9, 1.1), -8, "SFX")
 	
 	
 func play_click_sound() -> void:
-	GameLogic.play_sound_oneshot(sound3, rand_range(0.9, 1.1), -8, "SFX")
+	GlobalSignals.emit_signal("play_keyboard_enter_sound")
+	#GameLogic.play_sound_oneshot(sound3, rand_range(0.9, 1.1), -8, "SFX")
