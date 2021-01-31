@@ -24,6 +24,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/logic/directory_node.gd"
 }, {
+"base": "Label",
+"class": "HighlightLabel",
+"language": "GDScript",
+"path": "res://scripts/ui/highlight_label.gd"
+}, {
 "base": "NOSFile",
 "class": "NOSDecorationFile",
 "language": "GDScript",
@@ -44,20 +49,39 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/files/nos_text_file.gd"
 }, {
+"base": "Reference",
+"class": "Player",
+"language": "GDScript",
+"path": "res://scripts/logic/player.gd"
+}, {
+"base": "Node",
+"class": "Program",
+"language": "GDScript",
+"path": "res://scripts/programs/program.gd"
+}, {
 "base": "Control",
 "class": "Screen",
 "language": "GDScript",
 "path": "res://scripts/screen.gd"
+}, {
+"base": "Panel",
+"class": "WindowContainer",
+"language": "GDScript",
+"path": "res://scripts/ui/window_container.gd"
 } ]
 _global_script_class_icons={
 "DirectoryGraph": "",
 "DirectoryGraphNode": "",
 "DirectoryNode": "",
+"HighlightLabel": "",
 "NOSDecorationFile": "",
 "NOSFile": "",
 "NOSImageFile": "",
 "NOSTextFile": "",
-"Screen": ""
+"Player": "",
+"Program": "",
+"Screen": "",
+"WindowContainer": ""
 }
 
 [application]
@@ -65,6 +89,11 @@ _global_script_class_icons={
 config/name="NefariOS"
 run/main_scene="res://scenes/main.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+GameLogic="*res://scripts/logic/game_logic.gd"
+ScreenHelper="*res://scripts/screen_helper.gd"
 
 [display]
 
