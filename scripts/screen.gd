@@ -18,6 +18,10 @@ func _ready() -> void:
 func set_screen_text(text_: String) -> void:
 	text.set_text(text_)
 	text.show()
+	
+	
+func show_virus_particles(show: bool) -> void:
+	($ParticlesVirus as Particles2D).set_emitting(show)
 
 func run_main_program() -> void:
 	var program := MAIN_PROGRAM.new()

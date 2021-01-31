@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://fonts/font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scripts/screen_cursor.gd" type="Script" id=3]
@@ -15,6 +15,16 @@ void fragment() {
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
 
+[sub_resource type="ParticlesMaterial" id=5]
+emission_shape = 2
+emission_box_extents = Vector3( 340, 180, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 6.0
+scale_random = 0.5
+
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
 render_mode unshaded;
@@ -29,7 +39,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=4]
 shader = SubResource( 3 )
-shader_param/phosphor_color = Color( 0, 1, 0, 1 )
+shader_param/phosphor_color = Color( 1, 1, 1, 1 )
 
 [node name="Screen" type="Control"]
 anchor_right = 1.0
@@ -190,6 +200,15 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ParticlesVirus" type="Particles2D" parent="."]
+position = Vector2( 360, 192 )
+emitting = false
+amount = 72
+lifetime = 0.2
+preprocess = 1.0
+explosiveness = 1.0
+process_material = SubResource( 5 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2( -1, -1 )

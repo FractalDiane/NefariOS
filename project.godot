@@ -101,6 +101,7 @@ config/windows_native_icon="res://favicon.ico"
 
 GameLogic="*res://scripts/logic/game_logic.gd"
 ScreenHelper="*res://scripts/screen_helper.gd"
+Virus="*res://scripts/logic/virus.gd"
 
 [display]
 

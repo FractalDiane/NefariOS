@@ -27,6 +27,10 @@ func clear_screen() -> void:
 	
 func show_start_text() -> void:
 	($Viewport/Screen as Screen).set_screen_text(file_to_display.text)
+	
+	
+func show_virus_particles(show: bool) -> void:
+	($Viewport/Screen as Screen).show_virus_particles(show)
 
 
 func _input(event: InputEvent) -> void:
