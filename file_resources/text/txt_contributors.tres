@@ -5,7 +5,8 @@
 [resource]
 script = ExtResource( 1 )
 file_name = "contributors.txt"
-text = "Thank you to all our contributors who have made this project possible.
+text = "Thank you to all our contributors who
+have made this project possible.
 
 Jeff Briggs
 Clive Stroustrup

@@ -14,26 +14,35 @@ v1.3.8
 ==================================
 INTRODUCTION
 ==================================
-Thank you for installing Infinitesimality (R) software. We 
-are glad you've decided to choose our company, and we want 
-to assure you that we are committed to delivering you a 
-reliable and useful product at a reasonable price.
+Thank you for installing 
+Infinitesimality (R) software. We are 
+glad you've decided to choose our 
+company, and we want to assure you that 
+we are committed to delivering you a 
+reliable and useful product at a 
+reasonable price.
 
-This file will walk you through the setup and basic use of 
-this software. This software requires an Intel 80386 
-processor running at 15 MHz or greater and at least 800 KB 
-of RAM; we recommend at least a 25 MHz 386 and 1 MB of RAM 
-for the optimum performance. If your system does not meet 
-these requirements, we cannot guarantee that you will be 
-able to run this software. Please note that this software is 
-not compatible with NefariOS or any other derivatives of 
-MS-DOS or PC-DOS.
+This file will walk you through the 
+setup and basic use of this software. 
+This software requires an Intel 80386 
+processor running at 15 MHz or greater 
+and at least 800 KB of RAM; we recommend
+at least a 25 MHz 386 and 1 MB of RAM 
+for the optimum performance. If your 
+system does not meet these requirements,
+we cannot guarantee that you will be 
+able to run this software. Please note 
+that this software is not compatible 
+with NefariOS or any other derivatives 
+of MS-DOS or PC-DOS.
 
 ==================================
 RUNNING THE SOFTWARE
 ==================================
-If you are reading this file, you should have already 
-installed the software using the included disk. The software
-will be found in the same folder as this file, under the 
-name \"ATS.exe.\" Run this file using your command line or 
+If you are reading this file, you should
+have already installed the software 
+using the included disk. The software 
+will be found in the same folder as this
+file, under the name \"ATS.exe.\" Run 
+this file using your command line or 
 graphical shell to launch the software."
