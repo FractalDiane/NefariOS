@@ -1,8 +1,9 @@
 class_name Screen
 extends Control
 
-
 const MAIN_PROGRAM := preload("res://scripts/programs/file_manager.gd")
+
+var phosphor_colors := [Color("#ff7800"), Color("#00ff00"), Color("#ffffff")]
 
 onready var text := $Text as RichTextLabel
 

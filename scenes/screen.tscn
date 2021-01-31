@@ -1,22 +1,28 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://fonts/font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scripts/screen_cursor.gd" type="Script" id=3]
 [ext_resource path="res://scripts/screen.gd" type="Script" id=4]
 [ext_resource path="res://computer_theme.tres" type="Theme" id=5]
 
-[sub_resource type="Shader" id=1]
+[sub_resource type="CanvasItemMaterial" id=5]
+light_mode = 1
+
+[sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
 render_mode unshaded;
 
+uniform vec4 phosphor_color : hint_color = vec4(1f);
+
 void fragment() {
-	vec4 screen = texture(SCREEN_TEXTURE, SCREEN_UV);
-	COLOR = vec4(1f - screen.r, 1f - screen.g, 1f - screen.b, 1f);
+	COLOR = texture(SCREEN_TEXTURE, SCREEN_UV);
+	COLOR *= phosphor_color;
 }
 "
 
-[sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 1 )
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
+shader_param/phosphor_color = Color( 0, 1, 0, 1 )
 
 [node name="Screen" type="Control"]
 anchor_right = 1.0
@@ -130,7 +136,7 @@ __meta__ = {
 }
 
 [node name="Cursor" type="Control" parent="."]
-material = SubResource( 2 )
+material = SubResource( 5 )
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
@@ -143,3 +149,17 @@ __meta__ = {
 offset = Vector2( -1, -1 )
 anchor_mode = 0
 current = true
+
+[node name="Phosphor" type="ColorRect" parent="."]
+material = SubResource( 4 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 968.0
+margin_bottom = 528.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
