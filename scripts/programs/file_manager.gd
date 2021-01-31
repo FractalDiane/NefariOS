@@ -2,6 +2,7 @@ extends Program
 
 
 const TEXT_POPUP := preload("res://scripts/ui/text_popup.tscn")
+const OPTIONS_MENU := preload("res://scripts/ui/options.tscn")
 const SCRIPT_TEMPLATE := """extends Program
 func _exec(args: Array) -> void:
 	%s
@@ -29,8 +30,20 @@ func _exec(args: Array) -> void:
 	directory_list.margin_left = 9
 	directory_list.add_constant_override("separation", 0)
 	
+	var option_button := FileButton.new()
+	window.add_child(option_button)
+	option_button.text = "OPTIONS"
+	option_button.set_anchors_and_margins_preset(Control.PRESET_BOTTOM_RIGHT)
+	option_button.connect("pressed", self, "_on_options_button_pressed")
+	
 	player = args[0]
 	display_directory(player.current_directory)
+
+
+func _on_options_button_pressed() -> void:
+	var menu := OPTIONS_MENU.instance()
+	var new_win := open_window(Rect2(Vector2(9*4,16*4), menu.rect_size), "OPTIONS")
+	new_win.add_child(menu)
 
 
 func _input(event: InputEvent) -> void:

@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=14 format=2]
+[gd_resource type="Theme" load_steps=19 format=2]
 
 [ext_resource path="res://fonts/font.tres" type="DynamicFont" id=1]
 
@@ -24,6 +24,25 @@ bg_color = Color( 0, 0, 0, 1 )
 content_margin_top = 16.0
 bg_color = Color( 1, 1, 1, 1 )
 expand_margin_right = 9.0
+
+[sub_resource type="ImageTexture" id=13]
+
+[sub_resource type="ImageTexture" id=16]
+
+[sub_resource type="ImageTexture" id=17]
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+content_margin_top = 16.0
+bg_color = Color( 1, 1, 1, 1 )
+border_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=6]
 
@@ -99,6 +118,13 @@ HScrollBar/styles/grabber_highlight = SubResource( 4 )
 HScrollBar/styles/grabber_pressed = SubResource( 4 )
 HScrollBar/styles/scroll = SubResource( 5 )
 HScrollBar/styles/scroll_focus = null
+HSlider/icons/grabber = SubResource( 13 )
+HSlider/icons/grabber_disabled = SubResource( 16 )
+HSlider/icons/grabber_highlight = SubResource( 13 )
+HSlider/icons/tick = SubResource( 17 )
+HSlider/styles/grabber_area = SubResource( 14 )
+HSlider/styles/grabber_area_highlight = SubResource( 14 )
+HSlider/styles/slider = SubResource( 15 )
 LineEdit/colors/clear_button_color = Color( 0.88, 0.88, 0.88, 1 )
 LineEdit/colors/clear_button_color_pressed = Color( 1, 1, 1, 1 )
 LineEdit/colors/cursor_color = Color( 0.94, 0.94, 0.94, 1 )
