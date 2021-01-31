@@ -10,7 +10,7 @@ var image_file: NOSImageFile
 
 func _exec(args: Array) -> void:
 	image_file = args[0]
-	window = open_window(Rect2(Vector2(9 * 4, 16 * 4), Vector2(9 * 50, 16 * 20)), image_file.file_name)
+	window = open_window(Rect2(Vector2(9 * 4, 16 * 4), Vector2(9 * 60, 16 * 20)), image_file.file_name)
 	
 	scroll_container = AlignedScrollContainer.new()
 	window.add_child(scroll_container)

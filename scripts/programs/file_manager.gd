@@ -1,6 +1,12 @@
 extends Program
 
 
+const TEXT_POPUP := preload("res://scripts/ui/text_popup.tscn")
+const SCRIPT_TEMPLATE := """extends Program
+func _exec(args: Array) -> void:
+	%s
+"""
+
 var window: Panel
 var directory_list: VBoxContainer
 var player: Player
@@ -20,6 +26,7 @@ func _exec(args: Array) -> void:
 	directory_list.anchor_bottom = Control.ANCHOR_END
 	directory_list.margin_right = 0
 	directory_list.margin_bottom = 0
+	directory_list.margin_left = 9
 	directory_list.add_constant_override("separation", 0)
 	
 	player = args[0]
@@ -31,7 +38,7 @@ func _input(event: InputEvent) -> void:
 		var b := event as InputEventMouseButton
 		if b.button_index == BUTTON_RIGHT and b.is_pressed():
 			if moused_over_file != null:
-				open_file_right_click_menu(moused_over_file)
+				open_file_right_click_menu(moused_over_file, moused_over_button)
 			elif moused_over_dir != null:
 				pass
 			else:
@@ -49,12 +56,15 @@ func empty_right_click_menu() -> void:
 			display_directory(previous_directory)
 
 
-func open_file_right_click_menu(var file: NOSFile) -> void:
+func open_file_right_click_menu(file: NOSFile, button: Button) -> void:
 	var choices := []
 	if file.is_target and not file.transferred:
 		choices += ["TRANSFER"]
 	if file is NOSTextFile:
 		choices += ["EDIT"]
+	if file is NOSTextFile and file.file_name.to_lower().ends_with(".gd"):
+		choices += ["RUN"]
+	choices += ["RENAME"]
 	if len(choices) == 0:
 		return
 		
@@ -66,6 +76,28 @@ func open_file_right_click_menu(var file: NOSFile) -> void:
 			GlobalSignals.emit_signal("play_file_sound")
 		"EDIT":
 			exec("edit", [file])
+		"RENAME":
+			var popup := TEXT_POPUP.instance()
+			get_parent().add_child(popup)
+			popup.rect_position = ScreenHelper.align_and_clamp(popup.rect_position)
+			popup.get_node("LineEdit").text = file.file_name
+			file.file_name = yield(popup, "text_entered")
+			button.text = file.file_name.to_upper()
+			popup.queue_free()
+		"RUN":
+			var source := (file as NOSTextFile).text
+			var split := source.split("\n")
+			source = SCRIPT_TEMPLATE % split.join("\n\t")
+			print(source)
+			var script := GDScript.new()
+			script.source_code = source
+			if (script.reload() != OK):
+				return
+			var node := Node.new()
+			node.set_script(script)
+			get_parent().add_child(node)
+			node.call("_exec", [])
+			
 
 
 func sort(a: NOSFile, b: NOSFile) -> bool:

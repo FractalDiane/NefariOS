@@ -39,6 +39,7 @@ func _ready() -> void:
 	title_label.rect_size       = Vector2()
 	title_label.rect_position.y = -15
 	title_label.rect_position.x = floor(title_label.rect_position.x / 9) * 9
+	move_child(title_label, 0)
 	
 	add_child(title_control)
 	title_control.anchor_right  = ANCHOR_END
@@ -47,6 +48,7 @@ func _ready() -> void:
 	title_control.margin_right  = 9
 	title_control.margin_bottom = 0
 	title_control.connect("gui_input", self, "_title_control_gui_input")
+	move_child(title_control, 1)
 	
 	
 	add_child(border_control)
@@ -57,6 +59,7 @@ func _ready() -> void:
 	border_control.margin_right  = 9
 	border_control.margin_bottom = 14
 	border_control.connect("gui_input", self, "_border_control_gui_input")
+	move_child(border_control, 2)
 	
 	add_child(close_button)
 	close_button.text = "X"
@@ -71,6 +74,7 @@ func _ready() -> void:
 	close_button.margin_bottom = 1
 	#close_button.rect_size = Vector2(9, 16)
 	close_button.connect("pressed", self, "queue_free")
+	move_child(close_button, 3)
 	
 	if Engine.editor_hint:
 		set_process_input(false)
