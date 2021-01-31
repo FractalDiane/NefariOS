@@ -1,0 +1,96 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "root.tree"
+can_be_corrupted = true
+is_secret = false
+text = "=====================
+TREE
+=====================
+=====================
+
+   MainScene
+    ┠╴WorldEnvironment
+    ┠╴AnimationPlayer
+    ┠╴Monitor
+    ┃  ┖╴Cube
+    ┠╴Camera
+    ┠╴StickyNote
+    ┃  ┖╴Cube004
+    ┠╴Viewport
+    ┃  ┖╴Screen
+    ┃     ┠╴ColorRect
+    ┃     ┠╴Logo
+    ┃     ┃  ┖╴@@2
+    ┃     ┠╴Text
+    ┃     ┃  ┖╴@@3
+    ┃     ┠╴BootText
+    ┃     ┃  ┖╴@@4
+    ┃     ┠╴Root
+    ┃     ┠╴ColorRect2
+    ┃     ┠╴ColorRect4
+    ┃     ┠╴ColorRect3
+    ┃     ┠╴ColorRect5
+    ┃     ┠╴BackBufferCopy
+    ┃     ┃  ┖╴Cursor
+    ┃     ┠╴ParticlesVirus
+    ┃     ┠╴Camera2D
+    ┃     ┖╴BackBufferCopy2
+    ┃        ┖╴Phosphor
+    ┠╴ViewportNote
+    ┃  ┖╴StickyNoteText
+    ┃     ┠╴ColorRect
+    ┃     ┖╴Text
+    ┃        ┖╴@@5
+    ┠╴Props
+    ┃  ┠╴Computer
+    ┃  ┃  ┠╴Cube010
+    ┃  ┃  ┖╴Light
+    ┃  ┃     ┖╴@@352
+    ┃  ┠╴Table
+    ┃  ┃  ┖╴Cube003
+    ┃  ┠╴Wall
+    ┃  ┠╴Wall2
+    ┃  ┠╴Wall3
+    ┃  ┠╴Wall4
+    ┃  ┠╴Wall5
+    ┃  ┖╴Wall6
+    ┠╴SpotLight
+    ┠╴OmniLight
+    ┠╴Flourescent
+    ┃  ┖╴ChaoticAudioStreamPlayer3D
+    ┃     ┖╴@@353
+    ┠╴Sound
+    ┃  ┠╴SoundStartupBeep
+    ┃  ┠╴SoundStartupFan
+    ┃  ┠╴SoundComputerFan
+    ┃  ┠╴Screech1
+    ┃  ┃  ┖╴@@354
+    ┃  ┠╴Screech2
+    ┃  ┃  ┖╴@@355
+    ┃  ┠╴Shuffle1
+    ┃  ┃  ┖╴@@356
+    ┃  ┠╴Shuffle2
+    ┃  ┃  ┖╴@@357
+    ┃  ┠╴Wind1
+    ┃  ┃  ┖╴@@358
+    ┃  ┠╴Wind2
+    ┃  ┃  ┖╴@@359
+    ┃  ┠╴Deep1
+    ┃  ┃  ┖╴@@360
+    ┃  ┖╴Deep2
+    ┃     ┖╴@@361
+    ┠╴GIProbe
+      KeyboardSounds
+       ┠╴ClickSound
+       ┠╴EnterSound
+       ┠╴TeleSound
+         Area
+            CollisionShape
+
+=====================
+=====================
+====================="

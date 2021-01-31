@@ -1,0 +1,24 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "tools.txt"
+can_be_corrupted = true
+is_secret = false
+text = "==== Needed
+Stove
+Medium pot
+Knife
+Cup measurer (at least 1 cup measurement)
+teaspoon measurer (3 teaspoons = 1 tablespoon)
+Strainer (big enough for one serving of noodles)
+Medium-sized serving bowl (about 2 cups or 400 ml worth)
+Eating Utensil(s)
+==== Preferred
+Another medium/small pot for multitasking
+Tablespoon measurer
+Cutting board
+Containers to hold ingredients during prep
+Containers to hold leftovers"
