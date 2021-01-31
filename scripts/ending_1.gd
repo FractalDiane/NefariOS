@@ -12,7 +12,7 @@ func play_ending() -> void:
 		$VoiceBest.play()
 		$TextScale/Text.set_text("Wow... you got them all.\nDidn't expect that.\n\nHere's the payment.\nI think I know who I'll be hiring next time.")
 	
-	$AnimationPlayer.play()
+	$AnimationPlayer.play("Animation")
 
 
 func quit_game() -> void:

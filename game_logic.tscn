@@ -13,3 +13,13 @@
 [node name="GameLogic" type="Node"]
 script = ExtResource( 1 )
 target_file_candidates = [ ExtResource( 5 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ) ]
+
+[node name="TimerSecret" type="Timer" parent="."]
+wait_time = 2.8
+one_shot = true
+
+[node name="TimerSecret2" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+[connection signal="timeout" from="TimerSecret" to="." method="secret_ending_2"]
+[connection signal="timeout" from="TimerSecret2" to="." method="secret_ending_3"]

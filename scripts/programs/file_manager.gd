@@ -58,13 +58,14 @@ func empty_right_click_menu() -> void:
 
 func open_file_right_click_menu(file: NOSFile, button: Button) -> void:
 	var choices := []
-	if file.is_target and not file.transferred:
+	if file.is_target and not file.transferred and not file.is_corrupted:
 		choices += ["TRANSFER"]
-	if file is NOSTextFile:
+	if file is NOSTextFile and not file.is_corrupted:
 		choices += ["EDIT"]
-	if file is NOSTextFile and file.file_name.to_lower().ends_with(".gd"):
+	if file is NOSTextFile and file.file_name.to_lower().ends_with(".gd") and not file.is_corrupted:
 		choices += ["RUN"]
-	choices += ["RENAME"]
+	if not file.is_corrupted:
+		choices += ["RENAME"]
 	if len(choices) == 0:
 		return
 		

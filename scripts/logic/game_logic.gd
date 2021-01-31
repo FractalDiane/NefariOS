@@ -111,11 +111,28 @@ func trigger_secret_ending() -> void:
 	var screen: Screen
 	if running_main_scene:
 		screen = get_tree().current_scene.get_node("Viewport/Screen") as Screen
+		$Sound/Stairs.play()
 	else:
 		screen = get_tree().current_scene as Screen
 		
 	screen.set_screen_color(Color("#ff0000"))
 	screen.show_secret()
+	$TimerSecret.start()
+	
+	
+func secret_ending_2() -> void:
+	var screen: Screen
+	if running_main_scene:
+		screen = get_tree().current_scene.get_node("Viewport/Screen") as Screen
+	else:
+		screen = get_tree().current_scene as Screen
+		
+	screen.show_secret_2()
+	$TimerSecret2.start()
+	
+	
+func secret_ending_3() -> void:
+	get_tree().quit()
 
 
 func _on_player_directory_changed(new_dir: DirectoryNode) -> void:
