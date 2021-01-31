@@ -29,9 +29,24 @@ func _exec(args: Array) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		var b := event as InputEventMouseButton
-		if b.button_index == BUTTON_RIGHT and b.is_pressed() and moused_over_button != null:
+		if b.button_index == BUTTON_RIGHT and b.is_pressed():
 			if moused_over_file != null:
 				open_file_right_click_menu(moused_over_file)
+			elif moused_over_dir != null:
+				pass
+			else:
+				empty_right_click_menu()
+
+
+func empty_right_click_menu() -> void:
+	var choices = ["NEW FILE"]
+	var menu := open_choice_menu(get_viewport().get_mouse_position(), choices)
+	match yield(menu, "choice"):
+		"NEW FILE":
+			var file := NOSTextFile.new()
+			file.file_name = "NEW_FILE.TXT"
+			previous_directory.contents.append(file)
+			display_directory(previous_directory)
 
 
 func open_file_right_click_menu(var file: NOSFile) -> void:
@@ -59,7 +74,8 @@ func sort(a: NOSFile, b: NOSFile) -> bool:
 func display_directory(dir: DirectoryNode) -> void:
 	if previous_directory != null:
 		for f in previous_directory.contents:
-			f.disconnect("name_updated", self, "_on_file_name_updated")
+			if f.is_connected("name_updated", self, "_on_file_name_updated"):
+				f.disconnect("name_updated", self, "_on_file_name_updated")
 			
 	for child in directory_list.get_children():
 		child.queue_free()

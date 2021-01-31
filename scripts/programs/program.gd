@@ -10,6 +10,8 @@ func open_window(rect: Rect2, title: String) -> Panel:
 	
 	get_parent().add_child(window)
 	
+	window.connect("tree_exited", self, "queue_free")
+	
 	return window
 
 

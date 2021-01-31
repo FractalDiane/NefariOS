@@ -22,3 +22,14 @@ func _exec(args: Array) -> void:
 	
 	text_edit = edit_scene.get_node("TextEdit")
 	text_edit.text = file.text
+	
+	edit_scene.get_node("PanelContainer/HBoxContainer/FILE").connect("pressed", self, "_on_button_pressed")
+
+
+func _on_button_pressed() -> void:
+	var menu := open_choice_menu(get_viewport().get_mouse_position(), ["SAVE", "EXIT"])
+	match yield(menu, "choice"):
+		"SAVE":
+			file.text = text_edit.text
+		"EXIT":
+			window.queue_free()
