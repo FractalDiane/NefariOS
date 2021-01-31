@@ -15,7 +15,7 @@ func get_file_extension() -> String:
 	
 	
 func subscribe(tree: SceneTree) -> void:
-	tree.connect("idle_frame", self, "scramble_name")
+	tree.connect("idle_frame", self, "scramble_name", [], CONNECT_REFERENCE_COUNTED)
 
 
 func scramble_name() -> void:
