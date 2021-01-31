@@ -17,7 +17,7 @@ func open_root_window(title: String) -> Panel:
 	var window := Panel.new()
 	
 	window.rect_position = Vector2(9, 16)
-	window.rect_size = Vector2(720 - 9, 400 - 16)
+	window.rect_size = Vector2(720 - (9 * 2), 400 - (16 * 2))
 	
 	var label := Label.new()
 	window.add_child(label)
