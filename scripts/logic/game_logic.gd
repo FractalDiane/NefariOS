@@ -1,6 +1,6 @@
 extends Node
 
-const TEST_GRAPH = preload("res://scenes/directory_graphs/filesystem.tscn")
+const FILE_GRAPH = preload("res://scenes/directory_graphs/filesystem.tscn")
 
 export(Array, Resource) var target_file_candidates: Array
 export(int) var virus_countdown_limit := 4
@@ -40,18 +40,25 @@ func set_sticky_note_text() -> void:
 		
 	note_string += "DO NOT TOUCH these files:\n- secret file 1\n- secret file 2\n- secret file 3\n\nDo it fast.\n- G"
 	
-	if get_tree().current_scene.name != "Screen":
+	if get_tree().current_scene.name == "MainScene":
 		get_tree().current_scene.get_node("StickyNote").set_note_text(note_string)
 
 
 func load_graph() -> void:
-	var test_graph := TEST_GRAPH.instance() as DirectoryGraph
-	test_graph.visible = false
-	add_child(test_graph)
+	var graph := FILE_GRAPH.instance() as DirectoryGraph
+	graph.visible = false
+	add_child(graph)
 	#yield(get_tree(), "idle_frame")
-	nodes = test_graph.get_directories()
-	test_graph.queue_free()
+	nodes = graph.get_directories()
+	graph.queue_free()
 	
+	var file_count := 0
+	
+	for node in nodes:
+		file_count += len(node.contents)
+		
+	Virus.total_files = file_count
+			
 	for node in nodes:
 		if node.directory_name == "ROOT":
 			player.current_directory = node

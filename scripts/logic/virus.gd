@@ -1,6 +1,9 @@
 extends Node
 
 var current_location: DirectoryNode
+var files_corrupted := 0
+var total_files := 0
+
 
 func _ready() -> void:
 	# Start at random location
