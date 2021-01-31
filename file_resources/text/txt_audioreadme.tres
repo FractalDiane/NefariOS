@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource( 1 )
 file_name = "readme.txt"
+can_be_corrupted = true
+is_secret = false
 text = "Infinitesimality (R) Audio Trimming Software
 Copyright (C) 1987 Iinfinitesimality Co.
 v1.3.8

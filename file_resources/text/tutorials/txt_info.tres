@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource( 1 )
 file_name = "HEY_READ_THIS.txt"
+can_be_corrupted = false
+is_secret = false
 text = "So, as you probably noticed, this computer runs NefariOS. Don't judge my operating system tastes.
 
 Everyone hates it, though. It uses a graph-based structure instead of a hierarchial one. You can't go back up to a previous directory; you have to find another way back to it. I'm sure you'll manage.

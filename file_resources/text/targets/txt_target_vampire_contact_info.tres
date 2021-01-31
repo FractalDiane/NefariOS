@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource( 1 )
 file_name = "contacts.txt"
+can_be_corrupted = true
+is_secret = false
 text = "Bella Ward
 (319) 555-0168
 

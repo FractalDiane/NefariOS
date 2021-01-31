@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource( 1 )
 file_name = "os_gen.h"
+can_be_corrupted = true
+is_secret = false
 text = "// os_gen.h
 
 #ifndef OSGEN_H

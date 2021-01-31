@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource( 1 )
 file_name = "Raymond_notes.txt"
+can_be_corrupted = true
+is_secret = false
 text = "- 6502 uses little endian
 -- low bit first
 

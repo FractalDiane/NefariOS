@@ -33,9 +33,15 @@ func advance_corruption() -> void:
 			add_seen_dir(current_location)
 	else:
 		for f in current_location.contents:
+			if not f.can_be_corrupted:
+				continue
+				
 			if not f.is_corrupted:
 				f.is_corrupted = true
 				files_corrupted += 1
+				if f.is_target:
+					GameLogic.add_target_file_found_or_corrupted()
+				
 				if get_tree().current_scene.name == "MainScene":
 					var ratio := float(files_corrupted) / float(total_files)
 					if ratio >= 0.75:

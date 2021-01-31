@@ -11,13 +11,18 @@ var player := Player.new()
 var virus_countdown := virus_countdown_limit
 var running_main_scene := false
 
+var target_files_found_or_corrupted := 0
+var secret_files_found := 0
+
 
 func _ready() -> void:
 	randomize()
 	load_graph()
-	for node in nodes:
-		for file in node.contents:
-			file.subscribe(get_tree())
+	if get_tree().current_scene.name == "MainScene" or get_tree().current_scene.name == "Screen":
+		for node in nodes:
+			for file in node.contents:
+				file.subscribe(get_tree())
+				
 	player.connect("directory_changed", self, "_on_player_directory_changed")
 	
 	generate_target_files()
@@ -30,6 +35,7 @@ func generate_target_files() -> void:
 	for _i in range(4):
 		var index := int(rand_range(0, len(candidates) - 1))
 		player.required_files.push_back(candidates[index])
+		candidates[index].is_target = true
 		candidates.remove(index)
 		
 		
@@ -38,7 +44,7 @@ func set_sticky_note_text() -> void:
 	for f in player.required_files:
 		note_string += "- " + f.file_name + "\n"
 		
-	note_string += "DO NOT TOUCH these files:\n- secret file 1\n- secret file 2\n- secret file 3\n\nDo it fast.\n- G"
+	note_string += "DO NOT TOUCH these files:\n- nbv.cfg \n- nell.pcx\n- Any makefiles\n- chcklst.txt\nDo it fast.\nG"
 	
 	if get_tree().current_scene.name == "MainScene":
 		get_tree().current_scene.get_node("StickyNote").set_note_text(note_string)
@@ -63,6 +69,18 @@ func load_graph() -> void:
 		if node.directory_name == "ROOT":
 			player.current_directory = node
 			break
+	
+	
+func add_target_file_found_or_corrupted() -> void:
+	target_files_found_or_corrupted += 1
+	if target_files_found_or_corrupted >= 4:
+		get_tree().change_scene("res://scenes/ending_1.tscn")
+		
+		
+func add_secret_file_found() ->  void:
+	secret_files_found += 1
+	if secret_files_found >= 3:
+		get_tree().change_scene("res://scenes/ending_2.tscn")
 	
 	
 func play_sound_oneshot(sound: AudioStream, pitch: float = 1.0, volume: float = 0.0, bus: String = "Master") -> void:

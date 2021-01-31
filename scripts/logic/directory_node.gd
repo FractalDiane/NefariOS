@@ -9,7 +9,7 @@ var contents: Array
 
 func all_files_corrupted() -> bool:
 	for f in contents:
-		if not f.is_corrupted:
+		if not f.is_corrupted and f.can_be_corrupted:
 			return false
 			
 	return true

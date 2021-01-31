@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource( 1 )
 file_name = "Tutorial.txt"
+can_be_corrupted = false
+is_secret = false
 text = "- Click a file or directory to open it.
 - Drag the 
 [Add more controls here]"

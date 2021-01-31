@@ -4,7 +4,10 @@ class_name NOSFile
 signal name_updated(file)
 
 export(String) var file_name
+export(bool) var can_be_corrupted := true
+export(bool) var is_secret := false
 
+var is_target := false
 var is_corrupted := false
 
 var frame_counter := 0
@@ -25,3 +28,4 @@ func scramble_name() -> void:
 			file_name[i] = char(int(rand_range(33, 126)))
 			
 		emit_signal("name_updated", self)
+		
