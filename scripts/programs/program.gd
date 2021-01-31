@@ -22,6 +22,7 @@ func open_root_window(title: String) -> Panel:
 	var label := Label.new()
 	window.add_child(label)
 	label.text            = title
+	label.align           = Label.ALIGN_CENTER
 	label.grow_horizontal = Label.GROW_DIRECTION_BOTH
 	label.anchor_left     = 0.5
 	label.anchor_right    = 0.5
