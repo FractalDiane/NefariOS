@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://computer_theme.tres" type="Theme" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 1, 1, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_right = 1280.0
+margin_bottom = 16.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+margin_right = 1280.0
+margin_bottom = 16.0
+custom_constants/separation = 0
+
+[node name="FILE" type="Button" parent="PanelContainer/HBoxContainer"]
+margin_right = 36.0
+margin_bottom = 16.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "FILE"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_top = 16.0
+margin_right = 1280.0
+margin_bottom = 720.0
+size_flags_vertical = 3
