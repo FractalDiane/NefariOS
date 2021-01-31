@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/computer_start_iso_fan.ogg-82c886292d08973a7965c03d924b33ea.oggstr"
+
+[deps]
+
+source_file="res://audio/computer_start_iso_fan.ogg"
+dest_files=[ "res://.import/computer_start_iso_fan.ogg-82c886292d08973a7965c03d924b33ea.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
