@@ -36,5 +36,19 @@ func open_root_window(title: String) -> Panel:
 	return window
 
 
+func exec(executable: String, args: Array = []) -> void:
+	var script := load("res://scripts/programs/" + executable + ".gd") as GDScript
+	var program := script.new() as Program
+	get_parent().add_child(program)
+	program._exec(args)
+
+
+func default_open_file(file: NOSFile) -> void:
+	if file is NOSTextFile:
+		exec("less", [file])
+	elif file is NOSImageFile:
+		exec("imgview", [file])
+
+
 func _exec(args: Array) -> void:
 	pass

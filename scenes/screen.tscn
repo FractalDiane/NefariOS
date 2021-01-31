@@ -142,6 +142,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 720.0
+margin_right = 792.0
+margin_bottom = 400.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_top = 400.0
+margin_right = 792.0
+margin_bottom = 432.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="BackBufferCopy" type="BackBufferCopy" parent="."]
 copy_mode = 2
 
