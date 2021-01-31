@@ -36,4 +36,37 @@ start:
 	lda #5
 	sta V + 21
 	lda #11
-	sta V + 39"
+	sta V + 39
+
+	; Initialize coordinates
+	lda player_x
+	sta V
+	lda player_y
+	sta V + 1
+
+	LDA #$08 ; sprite multicolor 1
+	STA $D025
+	LDA #$02 ; sprite multicolor 2
+	STA $D026
+
+	lda #1
+	sta $d01c
+
+	lda #15
+	sta $d021
+
+	; Double the size of the sprite
+	lda #1
+	sta V + 23
+	sta V + 29
+	jsr load_sprite
+	rts
+
+load_sprite:
+	ldy #62
+@loop:
+	lda twill,y ; Load the sprite with indirect addressing
+	sta 832,y
+	dey
+	bpl @loop
+	rts"
