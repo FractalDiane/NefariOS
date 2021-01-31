@@ -15,6 +15,8 @@ var close_button := ToolButton.new()
 var title_dragging := false
 var border_dragging := false
 var border_drag: int = 0
+var original_position := Vector2()
+var original_mouse_position := Vector2()
 
 export(String) var title setget set_title
 func set_title(to: String) -> void:
@@ -89,6 +91,8 @@ func _title_control_gui_input(event: InputEvent) -> void:
 		var mb := event as InputEventMouseButton
 		if mb.button_index == BUTTON_LEFT and mb.is_pressed():
 			title_dragging = true
+			original_position = rect_position
+			original_mouse_position = ScreenHelper.align_and_clamp(get_viewport().get_mouse_position())
 
 
 func _border_control_gui_input(event: InputEvent) -> void:
@@ -115,9 +119,10 @@ func _input(event: InputEvent) -> void:
 			border_drag = 0
 	if event is InputEventMouseMotion:
 		if title_dragging:
-			rect_position = get_viewport().get_mouse_position()
-			rect_position.x = (floor(rect_position.x / 9) * 9) + 9
-			rect_position.y = (floor(rect_position.y / 16) * 16) + 16
+			var mouse_rel: Vector2 = ScreenHelper.align_and_clamp(get_viewport().get_mouse_position()) - original_mouse_position
+			rect_position = mouse_rel + original_position
+#			rect_position.x = (floor(rect_position.x / 9) * 9) + 9
+#			rect_position.y = (floor(rect_position.y / 16) * 16) + 16
 #		elif border_dragging:
 #			if (border_drag & BorderDrag.LEFT) == BorderDrag.LEFT:
 #
