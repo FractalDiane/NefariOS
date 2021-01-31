@@ -90,6 +90,9 @@ func open_file_right_click_menu(file: NOSFile, button: Button) -> void:
 			GlobalSignals.emit_signal("play_file_sound")
 		"EDIT":
 			exec("edit", [file])
+			if file.is_secret and not file.secret_opened:
+				GameLogic.add_secret_file_found()
+				file.secret_opened = true
 		"RENAME":
 			var popup := TEXT_POPUP.instance()
 			get_parent().add_child(popup)

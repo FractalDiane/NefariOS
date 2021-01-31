@@ -30,7 +30,7 @@ func show_secret() -> void:
 	
 	
 func show_secret_2() -> void:
-	$TextSecret.set_text("\n\n\n\n\n\n\n\n\n\n\n              				                      RUN.")
+	$TextSecret.set_text("\n\n\n\n\n\n\n\n\n\n\n              				          RUN.")
 	
 	
 func show_virus_particles(show: bool) -> void:

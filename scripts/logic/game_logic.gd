@@ -19,7 +19,7 @@ var secret_files_found := 0
 func _ready() -> void:
 	randomize()
 	load_graph()
-	if get_tree().current_scene.name == "MainScene" or get_tree().current_scene.name == "Screen":
+	if get_tree().current_scene.name == "MainScene" or get_tree().current_scene.name == "Screen" or get_tree().current_scene.name == "Warning":
 		for node in nodes:
 			for file in node.contents:
 				file.subscribe(get_tree())
