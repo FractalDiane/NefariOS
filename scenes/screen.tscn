@@ -29,7 +29,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=4]
 shader = SubResource( 3 )
-shader_param/phosphor_color = Color( 0, 1, 0, 1 )
+shader_param/phosphor_color = Color( 1, 0, 0, 1 )
 
 [node name="Screen" type="Control"]
 anchor_right = 1.0

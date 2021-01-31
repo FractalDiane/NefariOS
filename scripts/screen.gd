@@ -9,6 +9,8 @@ onready var text := $Text as RichTextLabel
 
 
 func _ready() -> void:
+	var index := int(rand_range(0, len(phosphor_colors) - 1))
+	$BackBufferCopy2/Phosphor.get_material().set_shader_param("phosphor_color", phosphor_colors[index])
 	if get_tree().current_scene == self:
 		run_main_program()
 

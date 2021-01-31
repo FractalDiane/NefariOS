@@ -10,6 +10,7 @@ var player := Player.new()
 
 
 func _ready() -> void:
+	randomize()
 	load_graph()
 
 
