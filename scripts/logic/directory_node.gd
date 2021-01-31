@@ -2,7 +2,7 @@ extends Reference
 class_name DirectoryNode
 
 
-var directory_name = ""
+var directory_name := ""
 var links: Array
 var contents: Array
 

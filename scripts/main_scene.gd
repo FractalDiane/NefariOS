@@ -27,3 +27,7 @@ func clear_screen() -> void:
 	
 func show_start_text() -> void:
 	($Viewport/Screen as Screen).set_screen_text(file_to_display.text)
+
+
+func _input(event: InputEvent) -> void:
+	$Viewport.input(event)

@@ -1,17 +1,8 @@
 extends Node
 
 
-const TEST_GRAPH = preload("res://scenes/directory_graphs/test_graph.tscn")
-
 export(Array, Resource) var target_file_candidates: Array
-
-
-class Player:
-	var required_files: Array
-	var required_secrets: Array
-	var current_directory: DirectoryNode
-	var files_found: int
-	var secrets_found: int
+const TEST_GRAPH = preload("res://scenes/directory_graphs/filesystem.tscn")
 
 
 var nodes: Array
@@ -35,7 +26,13 @@ func load_graph() -> void:
 	var test_graph := TEST_GRAPH.instance() as DirectoryGraph
 	test_graph.visible = false
 	add_child(test_graph)
-	yield(get_tree(), "idle_frame")
+	#yield(get_tree(), "idle_frame")
 	nodes = test_graph.get_directories()
 	print(nodes)
 	test_graph.queue_free()
+	
+	for node in nodes:
+		if node.directory_name == "ROOT":
+			player.current_directory = node
+			break
+	print(player.current_directory)
