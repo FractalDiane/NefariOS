@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "contacts.txt"
+text = "Bella Ward
+(319) 555-0168
+
+Luke Thornton
+(864) 555-0122
+
+Abigail Alvaross
+(864) 555-0114
+
+Isabell McLain
+(864) 555-0190
+
+Yan Wu
+(111) 555-0111
+
+Peter Brisbois
+(727) 555-0153
+
+Cress Hawthorne
+(727) 555-0179
+
+Ralph Red
+(689) 555-0102"
