@@ -11,7 +11,8 @@ var player := Player.new()
 var virus_countdown := virus_countdown_limit
 var running_main_scene := false
 
-var target_files_found_or_corrupted := 0
+var target_files_found := 0
+var target_files_corrupted := 0
 var secret_files_found := 0
 
 
@@ -71,9 +72,23 @@ func load_graph() -> void:
 			break
 	
 	
-func add_target_file_found_or_corrupted() -> void:
-	target_files_found_or_corrupted += 1
-	if target_files_found_or_corrupted >= 4:
+func add_target_file_found() -> void:
+	target_files_found += 1
+	if target_files_found + target_files_corrupted >= 4:
+		get_tree().change_scene("res://scenes/ending_1.tscn")
+		
+		
+func add_target_file_corrupted() -> void:
+	target_files_corrupted += 1
+	if get_tree().current_scene.name == "MainScene":
+		if target_files_found + target_files_corrupted >= 3:
+			get_tree().current_scene.get_node("Props/Computer/Light").switch_state(3)
+		elif target_files_found + target_files_corrupted >= 2:
+			get_tree().current_scene.get_node("Props/Computer/Light").switch_state(2)
+		elif target_files_found + target_files_corrupted >= 1:
+			get_tree().current_scene.get_node("Props/Computer/Light").switch_state(1)
+
+	if target_files_found + target_files_corrupted >= 4:
 		get_tree().change_scene("res://scenes/ending_1.tscn")
 		
 		

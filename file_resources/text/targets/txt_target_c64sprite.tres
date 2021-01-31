@@ -1,0 +1,74 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "main.asm"
+can_be_corrupted = true
+is_secret = false
+text = ".org $080d
+.segment \"STARTUP\"
+.segment \"INIT\"
+.segment \"ONCE\"
+.segment \"CODE\"
+
+jmp start
+
+SPRITE_ADDR = 2040
+V = $d000
+
+player_x: .byte 100,0
+player_y: .byte 100
+
+twill:
+.byte $00,$88,$00,$28,$88,$a0,$aa,$8a
+.byte $a8,$aa,$aa,$a8,$aa,$aa,$a8,$88
+.byte $ec,$88,$88,$ec,$88,$08,$ec,$80
+.byte $0a,$aa,$80,$02,$aa,$00,$01,$a9
+.byte $00,$01,$55,$40,$22,$56,$40,$a2
+.byte $fe,$00,$a2,$de,$00,$aa,$56,$80
+.byte $aa,$76,$80,$2b,$ff,$00,$03,$ff
+.byte $00,$02,$8a,$00,$0a,$8a,$80,$8b
+
+start:
+	; Initialize sprite memory locations
+	lda #13
+	sta SPRITE_ADDR
+	lda #5
+	sta V + 21
+	lda #11
+	sta V + 39
+
+	; Initialize coordinates
+	lda player_x
+	sta V
+	lda player_y
+	sta V + 1
+
+	LDA #$08 ; sprite multicolor 1
+	STA $D025
+	LDA #$02 ; sprite multicolor 2
+	STA $D026
+
+	lda #1
+	sta $d01c
+
+	lda #15
+	sta $d021
+
+	; Double the size of the sprite
+	lda #1
+	sta V + 23
+	sta V + 29
+	jsr load_sprite
+	rts
+
+load_sprite:
+	ldy #62
+@loop:
+	lda twill,y ; Load the sprite with indirect addressing
+	sta 832,y
+	dey
+	bpl @loop
+	rts"

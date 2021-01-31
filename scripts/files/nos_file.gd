@@ -8,6 +8,7 @@ export(bool) var can_be_corrupted := true
 export(bool) var is_secret := false
 
 var is_target := false
+var transferred := false
 var is_corrupted := false
 
 var frame_counter := 0

@@ -40,19 +40,7 @@ func advance_corruption() -> void:
 				f.is_corrupted = true
 				files_corrupted += 1
 				if f.is_target:
-					GameLogic.add_target_file_found_or_corrupted()
-				
-				if get_tree().current_scene.name == "MainScene":
-					var ratio := float(files_corrupted) / float(total_files)
-					if ratio >= 0.75:
-						get_tree().current_scene.get_node("Props/Computer/Light").switch_state(3)
-					elif ratio >= 0.5:
-						get_tree().current_scene.get_node("Props/Computer/Light").switch_state(2)
-					elif ratio >= 0.25:
-						get_tree().current_scene.get_node("Props/Computer/Light").switch_state(1)
-					else:
-						get_tree().current_scene.get_node("Props/Computer/Light").switch_state(0)
-				
+					GameLogic.add_target_file_corrupted()
 				break
 		
 

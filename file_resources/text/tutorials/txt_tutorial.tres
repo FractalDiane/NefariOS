@@ -7,6 +7,7 @@ script = ExtResource( 1 )
 file_name = "Tutorial.txt"
 can_be_corrupted = false
 is_secret = false
-text = "- Click a file or directory to open it.
-- Drag the 
-[Add more controls here]"
+text = "- Left click a file or directory to open it.
+- Drag the window around to move it.
+- When you find a target file, right click on it and click \"transfer.\"
+- Make sure the virus doesn't corrupt too many target files."

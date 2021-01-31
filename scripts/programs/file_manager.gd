@@ -35,13 +35,20 @@ func _input(event: InputEvent) -> void:
 
 
 func open_file_right_click_menu(var file: NOSFile) -> void:
-	var choices = ["TRANSFER"]
+	var choices := []
+	if file.is_target and not file.transferred:
+		choices += ["TRANSFER"]
 	if file is NOSTextFile:
 		choices += ["EDIT"]
+	if len(choices) == 0:
+		return
+		
 	var menu := open_choice_menu(get_viewport().get_mouse_position(), choices)
 	match yield(menu, "choice"):
 		"TRANSFER":
-			pass # TODO
+			file.transferred = true
+			GameLogic.add_target_file_found()
+			GlobalSignals.emit_signal("play_file_sound")
 		"EDIT":
 			exec("edit", [file])
 

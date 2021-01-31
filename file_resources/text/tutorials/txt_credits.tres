@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource( 1 )
-file_name = ""
-can_be_corrupted = true
+file_name = "Credits.txt"
+can_be_corrupted = false
 is_secret = false
 text = "NefariOS
 Made for Global Game Jam 2021

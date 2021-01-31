@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/logic/game_logic.gd" type="Script" id=1]
 [ext_resource path="res://file_resources/text/targets/txt_target_cfile1.tres" type="Resource" id=2]
@@ -8,7 +8,8 @@
 [ext_resource path="res://file_resources/image/targets/img_target_random7.tres" type="Resource" id=6]
 [ext_resource path="res://file_resources/image/targets/img_target_darkhallway.tres" type="Resource" id=7]
 [ext_resource path="res://file_resources/image/targets/img_target_briefcase.tres" type="Resource" id=8]
+[ext_resource path="res://file_resources/text/targets/txt_target_c64sprite.tres" type="Resource" id=9]
 
 [node name="GameLogic" type="Node"]
 script = ExtResource( 1 )
-target_file_candidates = [ ExtResource( 5 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ) ]
+target_file_candidates = [ ExtResource( 5 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ) ]
