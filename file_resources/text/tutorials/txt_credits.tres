@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = ""
+can_be_corrupted = true
+is_secret = false
+text = "NefariOS
+Made for Global Game Jam 2021
+
+Kat Witten - Backend programming, frontend programming, modeling
+
+Timmy Yang - Sound design, lighting design, writing, photography
+
+Diane Sparks - Frontend programming, writing, modeling, sound design
+
+Brandon Nguyen - Voice acting"

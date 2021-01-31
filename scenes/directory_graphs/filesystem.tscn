@@ -8,7 +8,7 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 right_disconnects = true
-scroll_offset = Vector2( 3108, 1288 )
+scroll_offset = Vector2( -744, -319 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
@@ -366,10 +366,10 @@ connections = [ {
 } ]
 
 [node name="GraphNode" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -3508.0
-margin_top = -1368.0
-margin_right = -3221.0
-margin_bottom = -985.0
+margin_left = 344.0
+margin_top = 239.0
+margin_right = 631.0
+margin_bottom = 622.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( -400, -80 )
@@ -434,7 +434,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 directory_name = "ROOT"
-file_paths = [ "res://file_resources/text/tutorials/txt_info.tres", "res://file_resources/text/tutorials/txt_tutorial.tres" ]
+file_paths = [ "res://file_resources/text/tutorials/txt_info.tres", "res://file_resources/text/tutorials/txt_tutorial.tres", "res://file_resources/text/tutorials/txt_credits.tres" ]
 
 [node name="DirectoryNode" type="Control" parent="GraphNode"]
 margin_left = 28.0
@@ -465,10 +465,10 @@ margin_bottom = 378.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@29" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -3108.0
-margin_top = -568.0
-margin_right = -2821.0
-margin_bottom = -227.0
+margin_left = 744.0
+margin_top = 1039.0
+margin_right = 1031.0
+margin_bottom = 1380.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 0, 720 )
@@ -538,10 +538,10 @@ margin_bottom = 336.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@428" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -2988.0
-margin_top = 132.0
-margin_right = -2701.0
-margin_bottom = 473.0
+margin_left = 864.0
+margin_top = 1739.0
+margin_right = 1151.0
+margin_bottom = 2080.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 120, 1420 )
@@ -611,10 +611,10 @@ margin_bottom = 336.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@256" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -428.0
-margin_top = -268.0
-margin_right = -141.0
-margin_bottom = 52.0
+margin_left = 3424.0
+margin_top = 1339.0
+margin_right = 3711.0
+margin_bottom = 1659.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 2680, 1020 )
@@ -671,10 +671,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@248" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -428.0
-margin_top = 72.0
-margin_right = -140.99
-margin_bottom = 392.0
+margin_left = 3424.0
+margin_top = 1679.0
+margin_right = 3711.01
+margin_bottom = 1999.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 2680, 1360 )
@@ -731,10 +731,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@292" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -2388.0
-margin_top = -728.0
-margin_right = -2101.0
-margin_bottom = -408.0
+margin_left = 1464.0
+margin_top = 879.0
+margin_right = 1751.0
+margin_bottom = 1199.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 720, 560 )
@@ -791,10 +791,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@33" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -2948.0
-margin_top = -2308.0
-margin_right = -2661.0
-margin_bottom = -1925.0
+margin_left = 904.0
+margin_top = -701.0
+margin_right = 1191.0
+margin_bottom = -318.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 160, -1020 )
@@ -890,10 +890,10 @@ margin_bottom = 378.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@249" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -2468.0
-margin_top = -1908.0
-margin_right = -2181.0
-margin_bottom = -1588.0
+margin_left = 1384.0
+margin_top = -301.0
+margin_right = 1671.0
+margin_bottom = 19.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 640, -620 )
@@ -950,10 +950,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@140" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -1928.0
-margin_top = -2108.0
-margin_right = -1641.0
-margin_bottom = -1788.0
+margin_left = 1924.0
+margin_top = -501.0
+margin_right = 2211.0
+margin_bottom = -181.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1180, -820 )
@@ -1010,10 +1010,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@523" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -2468.0
-margin_top = -1508.0
-margin_right = -2181.0
-margin_bottom = -1188.0
+margin_left = 1384.0
+margin_top = 99.0
+margin_right = 1671.0
+margin_bottom = 419.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 640, -220 )
@@ -1070,10 +1070,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@260" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 232.0
-margin_top = 232.0
-margin_right = 519.0
-margin_bottom = 552.0
+margin_left = 4084.0
+margin_top = 1839.0
+margin_right = 4371.0
+margin_bottom = 2159.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 3340, 1520 )
@@ -1130,10 +1130,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@264" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = 592.0
-margin_top = 232.0
-margin_right = 879.0
-margin_bottom = 552.0
+margin_left = 4444.0
+margin_top = 1839.0
+margin_right = 4731.0
+margin_bottom = 2159.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 3700, 1520 )
@@ -1190,10 +1190,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@21" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -2788.0
-margin_top = -1508.0
-margin_right = -2501.0
-margin_bottom = -1188.0
+margin_left = 1064.0
+margin_top = 99.0
+margin_right = 1351.0
+margin_bottom = 419.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 320, -220 )
@@ -1250,10 +1250,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@25" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -2788.0
-margin_top = -1128.0
-margin_right = -2501.0
-margin_bottom = -787.0
+margin_left = 1064.0
+margin_top = 479.0
+margin_right = 1351.0
+margin_bottom = 820.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 320, 160 )
@@ -1323,10 +1323,10 @@ margin_bottom = 336.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@363" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -2468.0
-margin_top = -2848.0
-margin_right = -2181.0
-margin_bottom = -2507.0
+margin_left = 1384.0
+margin_top = -1241.0
+margin_right = 1671.0
+margin_bottom = -900.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 640, -1560 )
@@ -1396,10 +1396,10 @@ margin_bottom = 336.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@432" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -1748.0
-margin_top = -2468.0
-margin_right = -1461.0
-margin_bottom = -2148.0
+margin_left = 2104.0
+margin_top = -861.0
+margin_right = 2391.0
+margin_bottom = -541.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1360, -1180 )
@@ -1456,10 +1456,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@236" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -2408.0
-margin_top = 72.0
-margin_right = -2121.0
-margin_bottom = 392.0
+margin_left = 1444.0
+margin_top = 1679.0
+margin_right = 1731.0
+margin_bottom = 1999.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 700, 1360 )
@@ -1516,10 +1516,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@240" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -2428.0
-margin_top = 492.0
-margin_right = -2141.0
-margin_bottom = 812.0
+margin_left = 1424.0
+margin_top = 2099.0
+margin_right = 1711.0
+margin_bottom = 2419.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 680, 1780 )
@@ -1576,10 +1576,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@224" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -1648.0
-margin_top = 432.0
-margin_right = -1361.0
-margin_bottom = 752.0
+margin_left = 2204.0
+margin_top = 2039.0
+margin_right = 2491.0
+margin_bottom = 2359.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1460, 1720 )
@@ -1636,10 +1636,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@244" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -928.0
-margin_top = 372.0
-margin_right = -641.0
-margin_bottom = 734.0
+margin_left = 2924.0
+margin_top = 1979.0
+margin_right = 3211.0
+margin_bottom = 2341.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 2180, 1660 )
@@ -1709,10 +1709,10 @@ margin_bottom = 336.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@252" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -268.0
-margin_top = 492.0
-margin_right = 19.01
-margin_bottom = 812.0
+margin_left = 3584.0
+margin_top = 2099.0
+margin_right = 3871.01
+margin_bottom = 2419.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 2840, 1780 )
@@ -1769,10 +1769,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@228" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -968.0
-margin_top = -488.0
-margin_right = -681.0
-margin_bottom = -168.0
+margin_left = 2884.0
+margin_top = 1119.0
+margin_right = 3171.0
+margin_bottom = 1439.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 2140, 800 )
@@ -1829,10 +1829,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@220" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -1468.0
-margin_top = -8.0
-margin_right = -1181.0
-margin_bottom = 375.0
+margin_left = 2384.0
+margin_top = 1599.0
+margin_right = 2671.0
+margin_bottom = 1982.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1640, 1280 )
@@ -1915,10 +1915,10 @@ margin_bottom = 357.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@378" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -2028.0
-margin_top = -248.0
-margin_right = -1741.0
-margin_bottom = 72.0
+margin_left = 1824.0
+margin_top = 1359.0
+margin_right = 2111.0
+margin_bottom = 1679.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1080, 1040 )
@@ -1975,10 +1975,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@216" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -1448.0
-margin_top = -548.0
-margin_right = -1161.0
-margin_bottom = -207.0
+margin_left = 2404.0
+margin_top = 1059.0
+margin_right = 2691.0
+margin_bottom = 1400.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1660, 740 )
@@ -2048,10 +2048,10 @@ margin_bottom = 336.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@232" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -968.0
-margin_top = -48.0
-margin_right = -681.0
-margin_bottom = 293.0
+margin_left = 2884.0
+margin_top = 1559.0
+margin_right = 3171.0
+margin_bottom = 1900.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 2140, 1240 )
@@ -2121,10 +2121,10 @@ margin_bottom = 336.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@748" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -2068.0
-margin_top = -2868.0
-margin_right = -1781.0
-margin_bottom = -2548.0
+margin_left = 1784.0
+margin_top = -1261.0
+margin_right = 2071.0
+margin_bottom = -941.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1040, -1580 )
@@ -2181,10 +2181,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@136" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -1568.0
-margin_top = -2908.0
-margin_right = -1281.0
-margin_bottom = -2567.0
+margin_left = 2284.0
+margin_top = -1301.0
+margin_right = 2571.0
+margin_bottom = -960.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1540, -1620 )
@@ -2254,10 +2254,10 @@ margin_bottom = 336.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@1201" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -1108.0
-margin_top = -2868.0
-margin_right = -821.0
-margin_bottom = -2506.0
+margin_left = 2744.0
+margin_top = -1261.0
+margin_right = 3031.0
+margin_bottom = -899.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 2000, -1580 )
@@ -2340,10 +2340,10 @@ margin_bottom = 357.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@1205" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -688.0
-margin_top = -2968.0
-margin_right = -401.0
-margin_bottom = -2627.0
+margin_left = 3164.0
+margin_top = -1361.0
+margin_right = 3451.0
+margin_bottom = -1020.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 2420, -1680 )
@@ -2413,10 +2413,10 @@ margin_bottom = 336.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@1209" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -168.0
-margin_top = -3008.0
-margin_right = 119.0
-margin_bottom = -2688.0
+margin_left = 3684.0
+margin_top = -1401.0
+margin_right = 3971.0
+margin_bottom = -1081.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 2940, -1720 )
@@ -2473,10 +2473,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@148" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -1228.0
-margin_top = -928.0
-margin_right = -941.0
-margin_bottom = -608.0
+margin_left = 2624.0
+margin_top = 679.0
+margin_right = 2911.0
+margin_bottom = 999.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1880, 360 )
@@ -2533,10 +2533,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@144" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -1868.0
-margin_top = -888.0
-margin_right = -1581.0
-margin_bottom = -568.0
+margin_left = 1984.0
+margin_top = 719.0
+margin_right = 2271.0
+margin_bottom = 1039.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1240, 400 )
@@ -2593,10 +2593,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@1080" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -1388.0
-margin_top = -1328.0
-margin_right = -1101.0
-margin_bottom = -1008.0
+margin_left = 2464.0
+margin_top = 279.0
+margin_right = 2751.0
+margin_bottom = 599.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1720, -40 )
@@ -2653,10 +2653,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@1116" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -2348.0
-margin_top = -1168.0
-margin_right = -2061.0
-margin_bottom = -827.0
+margin_left = 1504.0
+margin_top = 439.0
+margin_right = 1791.0
+margin_bottom = 780.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 760, 120 )
@@ -2726,10 +2726,10 @@ margin_bottom = 336.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@1213" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -2028.0
-margin_top = -1648.0
-margin_right = -1741.0
-margin_bottom = -1286.0
+margin_left = 1824.0
+margin_top = -41.0
+margin_right = 2111.0
+margin_bottom = 321.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1080, -360 )
@@ -2812,10 +2812,10 @@ margin_bottom = 357.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@647" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -1728.0
-margin_top = -1228.0
-margin_right = -1441.0
-margin_bottom = -908.0
+margin_left = 2124.0
+margin_top = 379.0
+margin_right = 2411.0
+margin_bottom = 699.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1380, 60 )
@@ -2872,10 +2872,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@989" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -1228.0
-margin_top = -1848.0
-margin_right = -941.0
-margin_bottom = -1528.0
+margin_left = 2624.0
+margin_top = -241.0
+margin_right = 2911.0
+margin_bottom = 79.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1880, -560 )
@@ -2932,10 +2932,10 @@ margin_bottom = 315.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="@GraphNode@1217" type="GraphNode" parent="." instance=ExtResource( 2 )]
-margin_left = -1668.0
-margin_top = -1708.0
-margin_right = -1381.0
-margin_bottom = -1388.0
+margin_left = 2184.0
+margin_top = -101.0
+margin_right = 2471.0
+margin_bottom = 219.0
 mouse_filter = 1
 title = "Directory"
 offset = Vector2( 1440, -420 )
