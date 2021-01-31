@@ -53,17 +53,24 @@ __meta__ = {
 }
 
 [node name="Text" type="Control" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Text"]
-margin_top = 184.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Text"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Text/VBoxContainer"]
+margin_top = 146.0
 margin_right = 1280.0
-margin_bottom = 312.0
+margin_bottom = 236.0
 custom_fonts/font = ExtResource( 1 )
 text = "WARNING"
 align = 1
@@ -71,14 +78,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="Text"]
-margin_top = 304.0
+[node name="Label2" type="Label" parent="Text/VBoxContainer"]
+margin_top = 240.0
 margin_right = 1280.0
-margin_bottom = 541.0
+margin_bottom = 573.0
 custom_fonts/font = ExtResource( 2 )
 text = "This game contains flashing patterns and images.
 Please proceed with caution if you have epilepsy
 or any other sensitivity to flashing images.
+
+Headphones Recommended
 
 (Press Space to continue)"
 align = 1
