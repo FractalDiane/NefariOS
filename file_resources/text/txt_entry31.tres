@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "ENTRY_31.notebook"
+text = "////////////////////////////////////////
+Entry 31
+////////////////////////////////////////
+
+Deep inside I am sure sure they felt my pain. Though probably not very deep as a matter of fact. Just a shallow point of two. Those two points were indeed my point of interest, but that point of interest was far less than what was actually there. The gold within the mine. And it was the gold that was all mine. But that of which I call mine, little remains in the household that I would call mine. 
+
+This computer is mine, that much I can confirm.
+
+////////////////////////////////////////
+END ENTRY
+////////////////////////////////////////"

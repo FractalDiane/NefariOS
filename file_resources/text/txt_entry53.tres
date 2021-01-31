@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "ENTRY_53.notebook"
+text = "////////////////////////////////////////
+Entry 53
+////////////////////////////////////////
+
+Much I have lost, but much I have gained. For those that I have lost, I have little despair, but lately my lost has been worrying. Computer of mine, why have you lost what I call mine. My works of art and my works of art are no more. In its place has been replaced, just as I have done on the past. The replacement is odd, no longer my own works, but the works of another. It reeks of disorder, but at the same time it resembles familiarity. I fear it, for I may mistake it as my own. My own? At what point of that of which I own do I consider it owned?
+
+I must investigate.
+
+////////////////////////////////////////
+END ENTRY
+////////////////////////////////////////"
