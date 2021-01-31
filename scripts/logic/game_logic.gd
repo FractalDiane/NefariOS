@@ -41,6 +41,16 @@ func load_graph() -> void:
 			player.current_directory = node
 			break
 	print(player.current_directory)
+	
+	
+func play_sound_oneshot(sound: AudioStream, pitch: float = 1.0, volume: float = 0.0) -> void:
+	var player := AudioStreamPlayer.new()
+	player.connect("finished", player, "queue_free")
+	player.stream = sound
+	player.pitch_scale = pitch
+	player.volume_db = volume
+	get_tree().root.add_child(player)
+	player.play()
 
 
 func _on_player_directory_changed(new_dir: DirectoryNode) -> void:

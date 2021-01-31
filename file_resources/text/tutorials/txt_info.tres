@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "HEY_READ_THIS.txt"
+text = "So, as you probably noticed, this computer runs NefariOS. Don't judge my operating system tastes.
+
+Everyone hates it, though. It uses a graph-based structure instead of a hierarchial one. You can't go back up to a previous directory; you have to find another way back to it. I'm sure you'll manage.
+
+The virus is spreading fast, and it's gonna corrupt this whole computer before too long. It'll advance as you open more folders.
+
+Just find those files I told you to find and get them the hell off this computer. And DON'T OPEN THE FILES I TOLD YOU NOT TO. You'll be sorry.
+
+- G"

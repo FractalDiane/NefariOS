@@ -29,6 +29,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/logic/directory_node.gd"
 }, {
+"base": "Button",
+"class": "FileButton",
+"language": "GDScript",
+"path": "res://scripts/programs/file_button.gd"
+}, {
 "base": "Label",
 "class": "HighlightLabel",
 "language": "GDScript",
@@ -79,6 +84,7 @@ _global_script_class_icons={
 "DirectoryGraph": "",
 "DirectoryGraphNode": "",
 "DirectoryNode": "",
+"FileButton": "",
 "HighlightLabel": "",
 "NOSDecorationFile": "",
 "NOSFile": "",
