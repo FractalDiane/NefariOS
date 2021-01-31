@@ -42,12 +42,13 @@ func load_graph() -> void:
 			break
 	
 	
-func play_sound_oneshot(sound: AudioStream, pitch: float = 1.0, volume: float = 0.0) -> void:
+func play_sound_oneshot(sound: AudioStream, pitch: float = 1.0, volume: float = 0.0, bus: String = "Master") -> void:
 	var player := AudioStreamPlayer.new()
 	player.connect("finished", player, "queue_free")
 	player.stream = sound
 	player.pitch_scale = pitch
 	player.volume_db = volume
+	player.bus = bus
 	get_tree().root.add_child(player)
 	player.play()
 

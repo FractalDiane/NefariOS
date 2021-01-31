@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/files/nos_text_file.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+file_name = "Raymond_notes.txt"
+text = "- 6502 uses little endian
+-- low bit first
+
+- Accumulator
+-- holds a single 8 bit value
+-- used for math
+
+- X and Y
+-- used for addressing and fast storage
+
+- "
