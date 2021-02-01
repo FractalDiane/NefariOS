@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/harddrive.ogg-370460ac94dd8bd7afa51ddc4356b177.oggstr"
+
+[deps]
+
+source_file="res://audio/ambience/harddrive.ogg"
+dest_files=[ "res://.import/harddrive.ogg-370460ac94dd8bd7afa51ddc4356b177.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
