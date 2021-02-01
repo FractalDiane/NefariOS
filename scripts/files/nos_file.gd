@@ -10,7 +10,7 @@ export(bool) var is_secret := false
 var is_target := false
 var transferred := false
 var is_corrupted := false
-var secret_opened := false
+var opened := false
 
 var frame_counter := 0
 

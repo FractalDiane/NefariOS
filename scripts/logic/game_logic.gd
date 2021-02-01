@@ -39,6 +39,18 @@ func generate_target_files() -> void:
 		candidates.remove(index)
 		
 		
+func flash_screen_red() -> void:
+	var screen: Screen
+	if running_main_scene:
+		screen = get_tree().current_scene.get_node("Viewport/Screen") as Screen
+	else:
+		screen = get_tree().current_scene as Screen
+		
+	screen.show_secret_2()
+	
+	screen.flash_screen_red()
+		
+		
 func set_sticky_note_text() -> void:
 	var note_string := "Find these files:\n"
 	for f in player.required_files:

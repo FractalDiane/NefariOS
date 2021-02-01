@@ -270,3 +270,8 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="TimerFlash" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+[connection signal="timeout" from="TimerFlash" to="." method="_on_Timer_timeout"]

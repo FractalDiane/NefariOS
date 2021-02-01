@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/ending_1.gd" type="Script" id=1]
 [ext_resource path="res://audio/voice/ending_bad.ogg" type="AudioStream" id=2]
 [ext_resource path="res://audio/voice/ending_best.ogg" type="AudioStream" id=3]
 [ext_resource path="res://audio/voice/ending_meh.ogg" type="AudioStream" id=4]
 [ext_resource path="res://fonts/font_end.tres" type="DynamicFont" id=5]
+[ext_resource path="res://audio/knife.ogg" type="AudioStream" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Animation"
@@ -59,6 +60,9 @@ stream = ExtResource( 4 )
 [node name="VoiceBest" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
+[node name="SoundKnife" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
 [node name="TextScale" type="CenterContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -76,7 +80,6 @@ margin_left = -79.0
 margin_top = -23.0
 margin_right = 79.0
 margin_bottom = 22.0
-rect_scale = Vector2( 0.8, 1 )
 custom_fonts/font = ExtResource( 5 )
 text = "Hello there"
 align = 1
@@ -97,6 +100,7 @@ autostart = true
 wait_time = 3.0
 one_shot = true
 [connection signal="finished" from="VoiceBad" to="TimerEnd" method="start"]
+[connection signal="finished" from="VoiceBad" to="SoundKnife" method="play"]
 [connection signal="finished" from="VoiceMeh" to="TimerEnd" method="start"]
 [connection signal="finished" from="VoiceBest" to="TimerEnd" method="start"]
 [connection signal="timeout" from="TimerStart" to="." method="play_ending"]
