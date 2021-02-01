@@ -8,6 +8,7 @@ var text_file: NOSTextFile
 func _exec(args: Array) -> void:
 	text_file = args[0]
 	window = open_window(Rect2(Vector2(9 * 4, 16 * 4), Vector2(9 * 60, 16 * 15)), text_file.file_name)
+	window.connect("tree_exiting", self, "queue_free")
 	
 	scroll_container = AlignedScrollContainer.new()
 	window.add_child(scroll_container)

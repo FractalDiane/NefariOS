@@ -16,6 +16,7 @@ func _exec(args: Array) -> void:
 		file = NOSTextFile.new()
 		file.file_name = "NEW TEXT FILE"
 	window = open_window(Rect2(Vector2(9*2,16*2), Vector2(9*60,16*20)), file.file_name)
+	window.connect("tree_exiting", self, "queue_free")
 	
 	edit_scene = EDIT_SCENE.instance()
 	window.add_child(edit_scene)

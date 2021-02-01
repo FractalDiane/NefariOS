@@ -3,7 +3,7 @@
 [ext_resource path="res://computer_theme.tres" type="Theme" id=1]
 [ext_resource path="res://scripts/ui/file_button.gd" type="Script" id=2]
 
-[sub_resource type="GDScript" id=2]
+[sub_resource type="GDScript" id=1]
 script/source = "extends Control
 
 
@@ -20,7 +20,7 @@ func _on_Exit_pressed() -> void:
 margin_right = 288.0
 margin_bottom = 69.0
 theme = ExtResource( 1 )
-script = SubResource( 2 )
+script = SubResource( 1 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 9.0
