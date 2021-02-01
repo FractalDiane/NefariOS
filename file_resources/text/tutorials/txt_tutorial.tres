@@ -17,6 +17,8 @@ text = "- Left click a file or directory to open
 - Make sure the virus doesn't corrupt 
     too many target files.
 
+The virus progresses every time you change directories,,
+but not when a file is opened.
 Look at the light at the bottom right 
 for an indication of how many of them 
 are corrupted."

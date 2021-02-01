@@ -39,6 +39,11 @@ func generate_target_files() -> void:
 		candidates.remove(index)
 		
 		
+func cross_off_file(file_name: String) -> void:
+	if get_tree().current_scene.name == "MainScene":
+		get_tree().current_scene.get_node("StickyNote").cross_off_file(file_name)
+		
+		
 func flash_screen_red() -> void:
 	var screen: Screen
 	if running_main_scene:

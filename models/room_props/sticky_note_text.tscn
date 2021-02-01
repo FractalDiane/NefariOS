@@ -26,6 +26,19 @@ margin_bottom = 606.0
 rect_min_size = Vector2( 600, 600 )
 custom_fonts/normal_font = ExtResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "Find these files:
+- Some file
+- Some other file
+- Some third file
+
+Do NOT TOUCH THESE FILES:
+- secrets.txt
+- innocent.png
+- CS378IntroToBlockchain.pdf
+
+Do it fast.
+- G"
 meta_underlined = false
 text = "Find these files:
 - Some file

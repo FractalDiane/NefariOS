@@ -87,6 +87,7 @@ func open_file_right_click_menu(file: NOSFile, button: Button) -> void:
 		"TRANSFER":
 			file.transferred = true
 			GameLogic.add_target_file_found()
+			GameLogic.cross_off_file(file.file_name)
 			GlobalSignals.emit_signal("play_file_sound")
 		"EDIT":
 			exec("edit", [file])
