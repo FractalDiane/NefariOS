@@ -113,11 +113,15 @@ func add_secret_file_found() ->  void:
 	
 	
 func play_sound_oneshot(sound: AudioStream, pitch: float = 1.0, volume: float = 0.0, bus: String = "Master") -> void:
-	var player_ := AudioStreamPlayer.new()
+	var player_ := AudioStreamPlayer3D.new()
 	player_.connect("finished", player_, "queue_free")
 	player_.stream = sound
 	player_.pitch_scale = pitch
-	player_.volume_db = volume
+	#player_.volume_db = volume
+	player_.unit_db = 1
+	player_.unit_size = 2.1
+	player_.max_db = -1
+	player_.translation = Vector3(-0.194, 2.338, 1.668)
 	player_.bus = bus
 	get_tree().root.add_child(player_)
 	player_.play()
