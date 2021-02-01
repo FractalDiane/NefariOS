@@ -38,6 +38,13 @@ func _exec(args: Array) -> void:
 	
 	player = args[0]
 	display_directory(player.current_directory)
+	
+	for file in previous_directory.contents:
+		if file.file_name.to_lower() == "tutorial.txt":
+			default_open_file(file)
+	for file in previous_directory.contents:
+		if file.file_name.to_lower() == "hey_read_this.txt":
+			default_open_file(file)
 
 
 func _on_options_button_pressed() -> void:
@@ -123,6 +130,9 @@ func open_file_right_click_menu(file: NOSFile, button: Button) -> void:
 func sort(a: NOSFile, b: NOSFile) -> bool:
 	return a.file_name < b.file_name
 
+func sort_dirs(a: DirectoryNode, b: DirectoryNode) -> bool:
+	return a.directory_name < b.directory_name
+
 func display_directory(dir: DirectoryNode) -> void:
 	if previous_directory != null:
 		for f in previous_directory.contents:
@@ -133,6 +143,8 @@ func display_directory(dir: DirectoryNode) -> void:
 		child.queue_free()
 	
 	window.get_child(0).text = dir.directory_name
+	
+	dir.links.sort_custom(self, "sort_dirs")
 	
 	for _d in dir.links:
 		var d := _d as DirectoryNode

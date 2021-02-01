@@ -69,9 +69,9 @@ func _ready() -> void:
 	close_button.anchor_left   = ANCHOR_END
 	close_button.anchor_right  = ANCHOR_END
 	close_button.margin_left   = 0
-	close_button.margin_top    = -15
+	close_button.margin_top    = -16
 	close_button.margin_right  = 9
-	close_button.margin_bottom = 1
+	close_button.margin_bottom = 0
 	#close_button.rect_size = Vector2(9, 16)
 	close_button.connect("pressed", self, "queue_free")
 	move_child(close_button, 3)
@@ -97,6 +97,8 @@ func _title_control_gui_input(event: InputEvent) -> void:
 			title_dragging = true
 			original_position = rect_position
 			original_mouse_position = ScreenHelper.align_and_clamp(get_viewport().get_mouse_position())
+			
+			get_parent().move_child(self, get_parent().get_child_count() - 1)
 
 
 func _border_control_gui_input(event: InputEvent) -> void:
