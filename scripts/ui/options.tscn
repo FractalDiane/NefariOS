@@ -7,6 +7,9 @@
 script/source = "extends Control
 
 
+func _ready() -> void:
+	$CheckBox.pressed = OS.window_fullscreen
+
 
 func _on_HSlider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(0, linear2db(value / 200.0))
@@ -14,29 +17,22 @@ func _on_HSlider_value_changed(value: float) -> void:
 
 func _on_Exit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_CheckBox_toggled(button_pressed: bool) -> void:
+	OS.window_fullscreen = button_pressed
 "
 
 [node name="Control" type="Control"]
-margin_right = 288.0
-margin_bottom = 69.0
+margin_right = 243.0
+margin_bottom = 48.0
 theme = ExtResource( 1 )
 script = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 218.0
-margin_bottom = 16.0
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="."]
 margin_right = 54.0
 margin_bottom = 16.0
 size_flags_vertical = 7
@@ -45,9 +41,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer"]
-margin_left = 58.0
-margin_right = 218.0
+[node name="HSlider" type="HSlider" parent="."]
+margin_left = 63.0
+margin_right = 243.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 160, 0 )
 max_value = 200.0
@@ -57,40 +53,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 20.0
-margin_right = 218.0
-margin_bottom = 36.0
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+[node name="Label2" type="Label" parent="."]
+margin_top = 16.0
 margin_right = 90.0
-margin_bottom = 16.0
+margin_bottom = 32.0
 size_flags_vertical = 7
 text = "FULLSCREEN"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer2"]
-margin_left = 94.0
-margin_right = 110.0
-margin_bottom = 16.0
+[node name="CheckBox" type="CheckBox" parent="."]
+margin_left = 99.0
+margin_top = 16.0
+margin_right = 115.0
+margin_bottom = 32.0
 align = 1
 
-[node name="Control" type="Control" parent="VBoxContainer"]
-margin_top = 40.0
-margin_right = 218.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 0, 10 )
-
-[node name="Exit" type="Button" parent="VBoxContainer"]
-margin_top = 54.0
-margin_right = 218.0
-margin_bottom = 70.0
-text = " EXIT GAME"
+[node name="Exit" type="Button" parent="."]
+margin_top = 32.0
+margin_right = 243.0
+margin_bottom = 48.0
+text = "         EXIT GAME"
+align = 0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="value_changed" from="VBoxContainer/HBoxContainer/HSlider" to="." method="_on_HSlider_value_changed"]
-[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="toggled" from="CheckBox" to="." method="_on_CheckBox_toggled"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
