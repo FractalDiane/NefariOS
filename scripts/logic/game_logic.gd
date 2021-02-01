@@ -166,5 +166,6 @@ func _on_player_directory_changed(new_dir: DirectoryNode) -> void:
 
 	if running_main_scene:
 		(get_tree().current_scene.get_node("Viewport/Screen") as Screen).show_virus_particles(Virus.current_location == new_dir)
+		(get_tree().current_scene.get_node("Sound/SoundHarddrive") as AudioStreamPlayer3D).unit_db = 18 if Virus.current_location == new_dir else -60
 	else:
 		(get_tree().current_scene as Screen).show_virus_particles(Virus.current_location == new_dir)
