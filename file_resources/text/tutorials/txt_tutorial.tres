@@ -20,6 +20,6 @@ text = "- Left click a file or directory to open
 The virus progresses every time you change directories,
 but not when a file is opened.
 
-Look at the light at the bottom right 
-for an indication of how many of them 
-are corrupted."
+Look at the LED light on the right 
+for an indication of how much the system
+is corrupt."
