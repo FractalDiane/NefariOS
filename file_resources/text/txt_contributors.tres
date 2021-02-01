@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource( 1 )
 file_name = "contributors.txt"
+can_be_corrupted = true
+is_secret = false
 text = "Thank you to all our contributors who
 have made this project possible.
 

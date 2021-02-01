@@ -8,7 +8,7 @@ file_name = "Credits.txt"
 can_be_corrupted = false
 is_secret = false
 text = "NefariOS
-Made for Global Game Jam 2021
+Made with Godot for Global Game Jam 2021
 
 === Kat Witten ===
 Backend programming, frontend 
