@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource( 1 )
-file_name = "briefcase_ref.pcx"
+file_name = "briefcase_ref.img"
 can_be_corrupted = true
 is_secret = false
 texture = ExtResource( 2 )

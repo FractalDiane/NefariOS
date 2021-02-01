@@ -61,7 +61,7 @@ func set_sticky_note_text() -> void:
 	for f in player.required_files:
 		note_string += "- " + f.file_name + "\n"
 		
-	note_string += "DO NOT TOUCH these files:\n- nbv.cfg \n- nell.pcx\n- Anything ending in .notebook\n- chcklst.txt\nDo it fast.\nG"
+	note_string += "DO NOT TOUCH these files:\n- nbv.cfg \n- nell.img\n- Anything ending in .notebook\n- chcklst.txt\nDo it fast.\nG"
 	
 	if get_tree().current_scene.name == "MainScene":
 		get_tree().current_scene.get_node("StickyNote").set_note_text(note_string)

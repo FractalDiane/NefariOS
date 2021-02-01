@@ -8,7 +8,7 @@ file_name = "Tutorial.txt"
 can_be_corrupted = false
 is_secret = false
 text = "- Left click a file or directory to open
-    it. .pcx files will open images, and
+     it. .img files will open images, and
 	.txt and several other extensions
 	will open text files.
 - Drag the window around to move it.

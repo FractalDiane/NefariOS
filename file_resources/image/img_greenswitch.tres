@@ -5,5 +5,5 @@
 
 [resource]
 script = ExtResource( 1 )
-file_name = "alps_skcc_green.pcx"
+file_name = "alps_skcc_green.img"
 texture = ExtResource( 2 )

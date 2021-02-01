@@ -5,5 +5,5 @@
 
 [resource]
 script = ExtResource( 1 )
-file_name = "momshouse.pcx"
+file_name = "momshouse.img"
 texture = ExtResource( 2 )

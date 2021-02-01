@@ -7,9 +7,18 @@ script = ExtResource( 1 )
 file_name = "HEY_READ_THIS.txt"
 can_be_corrupted = false
 is_secret = false
-text = "So, as you probably noticed, this 
-computer runs NefariOS. Don't judge my 
-operating system tastes.
+text = "Let's make something clear: Don't just go
+poking around my files. Find those files
+I told you to find and get them the hell off this computer.
+They're on the sticky note.
+
+The virus is spreading fast, and it's 
+gonna corrupt this whole computer 
+before too long. It'll advance as you 
+go into more folders.
+
+Also, yes. This computer runs NefariOS.
+Don't judge my operating system tastes.
 
 Everyone hates it, though. It uses a 
 graph-based structure instead of a 
@@ -17,16 +26,8 @@ hierarchial one. You can't go back up to
 a previous directory; you have to find 
 another way back to it. I'm sure you'll 
 manage.
-
-The virus is spreading fast, and it's 
-gonna corrupt this  whole computer 
-before too long. It'll advance as you 
-open  more folders.
-
-Just find those files I told you to find
-and get them the hell off this 
-computer. They're on the sticky note. 
-And DON'T OPEN THE FILES I TOLD YOU NOT 
-TO. You'll be sorry.
+ 
+One more time: DON'T OPEN THE FILES I TOLD
+YOU NOT TO. You'll be sorry.
 
 - G"

@@ -50,5 +50,5 @@ func run_main_program() -> void:
 	program.call_deferred("_exec", [GameLogic.player])
 
 
-func _on_Timer_timeout() -> void:
+func _on_TimerFlash_timeout() -> void:
 	set_screen_color(previous_color)
