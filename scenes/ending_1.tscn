@@ -10,41 +10,41 @@
 resource_name = "Animation"
 length = 5.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("TextScale:scale")
-tracks/0/interp = 2
+tracks/0/path = NodePath("TextScale/Text:modulate")
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 5 ),
-"transitions": PoolRealArray( 0.406126, 1 ),
-"update": 0,
-"values": [ Vector2( 0.8, 1 ), Vector2( 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("TextScale:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
 "times": PoolRealArray( 0, 4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextScale:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.8, 1 ), Vector2( 1, 1 ) ]
+}
 
 [node name="Ending1" type="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1280.0
-margin_bottom = 720.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -59,16 +59,24 @@ stream = ExtResource( 4 )
 [node name="VoiceBest" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
-[node name="TextScale" type="Node2D" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 640, 360 )
-scale = Vector2( 0.8, 1 )
+[node name="TextScale" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 0.8, 1 )
+use_top_left = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Text" type="Label" parent="TextScale"]
-margin_left = -640.0
-margin_top = -232.0
-margin_right = 640.0
-margin_bottom = 232.0
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -79.0
+margin_top = -23.0
+margin_right = 79.0
+margin_bottom = 22.0
+rect_scale = Vector2( 0.8, 1 )
 custom_fonts/font = ExtResource( 5 )
 text = "Hello there"
 align = 1
